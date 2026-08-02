@@ -4,7 +4,7 @@
   imports = [
 
     # Hardware scan results
-    ./hardware-configuration.nix
+    ./modules/hardware/hardware-configuration.nix
 
     # Core
     ./modules/core/boot.nix
@@ -17,7 +17,7 @@
     # Hardware
     ./modules/hardware/amd-gpu.nix
     ./modules/hardware/core.nix
-    # ./modules/hardware/file-systems.nix
+    ./modules/hardware/file-systems.nix
     ./modules/hardware/graphics.nix
 
     # Services
