@@ -9,4 +9,4 @@ result-*
 **/.nixos-test-history
 
 # Ignore hardware-specific settings created during system installation
-**/hardware-configuration.nix
+# **/hardware-configuration.nix
