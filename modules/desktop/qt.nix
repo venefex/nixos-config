@@ -3,7 +3,6 @@
 {
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "qt6ct";
-    # QT_STYLE_OVERRIDE = "breeze-dark";
   };
 
   # Use KDE's XDG application menu so KDE applications integrate correctly

@@ -26,6 +26,7 @@
     ./modules/services/pipewire.nix
     ./modules/services/power-management.nix
     ./modules/services/printing.nix
+    ./modules/services/udev.nix
 
     # Security
     ./modules/security/firewall.nix
