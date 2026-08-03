@@ -18,21 +18,36 @@
   };
 
   outputs =
-    inputs@{
+    {
       self,
       nixpkgs,
       disko,
       home-manager,
       nur,
       ...
-    }:
+    }@inputs:
+    let
+      system = "x86_64-linux";
+
+      # Automatically collect every overlay under modules/overlays/
+      # Expects each entry to be a directory containing default.nix
+      overlays =
+        let
+          overlayDirs = builtins.attrNames (builtins.readDir ./modules/overlays);
+        in
+        map (name: import ./modules/overlays/${name}) overlayDirs;
+    in
     {
       nixosConfigurations.janus = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         specialArgs = { inherit inputs; };
         modules = [
           { nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ]; }
           ./configuration.nix
+
+          # Auto-collected overlays
+          { nixpkgs.overlays = overlays; }
+
           disko.nixosModules.disko
 
           home-manager.nixosModules.home-manager
@@ -43,19 +58,19 @@
               users.alex = import ./home.nix;
               backupFileExtension = null;
               backupCommand = pkgs.writeShellScript "hm-backup" ''
-                	src="$1"
-                	timestamp=$(date +%Y%m%d-%H%M%S)
-                	mv "$src" "$src.hm-backup-$timestamp"
-                	'';
+                src="$1"
+                timestamp=$(date +%Y%m%d-%H%M%S)
+                mv "$src" "$src.hm-backup-$timestamp"
+              '';
             };
           })
 
           nur.modules.nixos.default
+
           # replace qt6ct with the patched version in nur
           ({ ... }: {
             nixpkgs.overlays = [
               (final: prev: {
-                # Make both the top-level and the qt6Packages version point to the patched one
                 qt6ct = final.nur.repos.ilya-fedin.qt6ct;
                 qt6Packages = prev.qt6Packages.overrideScope (
                   qfinal: qprev: {
