@@ -1,42 +1,59 @@
 { pkgs, ... }:
-
 {
   home.packages = with pkgs; [
-    # Applications
-    brave
-    fooyin
+    # Archive managers
     kdePackages.ark
-    kdePackages.dolphin
-    kdePackages.konsole
-    kdePackages.okular
-    kdePackages.kcalc
-    kdePackages.kompare
-    liquidctl
-    vial
-    xnviewmp
 
-    # Dolphin integration
+    # Browsers
+    brave
+
+    # Calculators
+    kdePackages.kcalc
+
+    # Diff / compare tools
+    kdePackages.kompare
+
+    # Document viewers
+    kdePackages.okular
+
+    # Dolphin / KIO integration
     kdePackages.dolphin-plugins
     kdePackages.ffmpegthumbs
-    kdePackages.kio-admin
     kdePackages.kdegraphics-thumbnailers
+    kdePackages.kio-admin
     kdePackages.kservice
 
-    # Qt / Gnome theming
+    # File managers
+    kdePackages.dolphin
+
+    # Hardware tools
+    liquidctl
+    vial
+
+    # Image format support
+    icoutils
+    kdePackages.kimageformats
+    kdePackages.qtimageformats
+    kdePackages.qtsvg
+    resvg
+
+    # Image viewers
+    xnviewmp
+
+    # Music players
+    fooyin
+
+    # Terminals
+    kdePackages.konsole
+
+    # Theming
     kdePackages.breeze
     kdePackages.breeze-gtk
     kdePackages.breeze-icons
     nwg-look
 
-    # Image format support
-    icoutils
-    kdePackages.qtsvg
-    kdePackages.qtimageformats
-    kdePackages.kimageformats
-    resvg
-
-    # Misc
-    runapp
+    # Utilities
     pavucontrol
+    runapp
   ];
 }
