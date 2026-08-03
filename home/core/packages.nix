@@ -51,9 +51,6 @@
     kdePackages.breeze-icons
     nwg-look
 
-    # Desktop shell
-    noctalia
-
     # Utilities
     pavucontrol
     runapp

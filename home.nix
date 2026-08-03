@@ -30,6 +30,9 @@
 
     # Hypr
     ./home/hypr/modules/hyprpaper.nix
+
+    # Noctalia
+    ./home/desktop/noctalia.nix
   ];
 
   home.username = "alex";
