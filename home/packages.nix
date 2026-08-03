@@ -19,7 +19,7 @@
     kdePackages.kservice
 
     # Qt / Gnome theming
-    nur.repos.ilya-fedin.qt6ct # patched qt6ct to enable kde theming
+    # nur.repos.ilya-fedin.qt6ct # patched qt6ct to enable kde theming
     kdePackages.breeze
     kdePackages.breeze-gtk
     kdePackages.breeze-icons

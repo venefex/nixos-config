@@ -2,8 +2,8 @@
 
 {
   qt = {
-    enable = false;
-    # platformTheme.name = "qtct";
+    enable = true;
+    platformTheme.name = "qtct";
 
     qt6ctSettings = {
       Appearance = {
