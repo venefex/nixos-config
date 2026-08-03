@@ -51,6 +51,21 @@
             };
           })
 
+          # replace qt6ct with a patched version
+          ({ ... }: {
+            nixpkgs.overlays = [
+              (final: prev: {
+                # Make both the top-level and the qt6Packages version point to the patched one
+                qt6ct = final.nur.repos.ilya-fedin.qt6ct;
+                qt6Packages = prev.qt6Packages.overrideScope (
+                  qfinal: qprev: {
+                    qt6ct = final.nur.repos.ilya-fedin.qt6ct;
+                  }
+                );
+              })
+            ];
+          })
+
           # === Unfree packages configuration ===
           {
             nixpkgs.config.allowUnfreePredicate =
@@ -70,3 +85,22 @@
       };
     };
 }
+
+# How to install this patch
+# https://github.com/ilya-fedin/nur-repository/tree/master/pkgs/qt6ct for qt6ct in home-manager? I already have nur enabled in my flake and home-manager has useGlobalPkgs = true.
+
+# Here the default.nix content:
+
+# ```.nix
+
+# pkgs: with pkgs; with kdePackages; with qt6Packages; qt6ct.overrideAttrs(oldAttrs: rec {
+#   buildInputs = oldAttrs.buildInputs ++ ([
+#     qtdeclarative kconfig kcolorscheme kiconthemes
+#   ]);
+
+#   patches = [
+#     ./qt6ct-shenanigans.patch
+#   ];
+# })
+
+# ```
