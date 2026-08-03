@@ -13,6 +13,9 @@
     # Diff / compare tools
     kdePackages.kompare
 
+    # Desktop shell
+    noctalia
+
     # Document viewers
     kdePackages.okular
 
