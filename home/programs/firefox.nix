@@ -79,14 +79,22 @@
             toolbar = true;
             bookmarks = [
               {
+                name = "YouTube";
+                url = "https://www.youtube.com/";
+              }
+              {
+                name = "Proton Mail";
+                url = "https://mail.proton.me/";
+              }
+              {
                 name = "NixOS";
                 bookmarks = [
                   {
-                    name = "NixOS Packages (unstable)";
+                    name = "NixOS Packages";
                     url = "https://search.nixos.org/packages?channel=unstable/";
                   }
                   {
-                    name = "NixOS Options (unstable)";
+                    name = "NixOS Options";
                     url = "https://search.nixos.org/options?channel=unstable";
                   }
                   {
@@ -98,14 +106,6 @@
                     url = "https://searchix.ovh/";
                   }
                 ];
-              }
-              {
-                name = "YouTube";
-                url = "https://www.youtube.com/";
-              }
-              {
-                name = "Proton Mail";
-                url = "https://mail.proton.me/";
               }
             ];
           }
