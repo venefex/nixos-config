@@ -38,6 +38,12 @@
         map (name: import ./modules/overlays/${name}) overlayDirs;
     in
     {
+      packages.${system}.fooyin =
+        (import nixpkgs {
+          inherit system;
+          overlays = overlays;
+        }).fooyin;
+
       nixosConfigurations.janus = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
