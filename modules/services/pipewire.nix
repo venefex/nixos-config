@@ -11,7 +11,7 @@
     extraConfig.pipewire = {
       "99-clock-rate" = {
         "context.properties" = {
-          "default.clock.rate" = 44100;
+          "default.clock.rate" = 48000;
           "default.clock.allowed-rates" = [
             44100
             88200
