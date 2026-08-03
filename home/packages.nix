@@ -19,7 +19,7 @@
     kdePackages.kservice
 
     # Qt / Gnome theming
-    # kdePackages.breeze
+    kdePackages.breeze
     kdePackages.breeze-gtk
     kdePackages.breeze-icons
     nwg-look
