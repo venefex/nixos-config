@@ -27,6 +27,9 @@
 
     ./home/core/packages.nix
     ./home/core/variables.nix
+
+    # Hypr
+    ./home/desktop/hypr/modules/hyprpaper.nix
   ];
 
   home.username = "alex";
