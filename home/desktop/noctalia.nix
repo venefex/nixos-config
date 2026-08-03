@@ -15,6 +15,11 @@
         enabled = false;
         # default.path = "/path/to/wallpapers/wallpaper.png";
       };
+
+      locations = {
+        auto_locate = false;
+        address = "Teramo, Italy";
+      };
     };
   };
 }
