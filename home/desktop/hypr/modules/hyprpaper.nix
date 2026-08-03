@@ -1,9 +1,10 @@
 { ... }:
 
 {
-  programs.hyprpaper = {
+  services.programs.hyprpaper = {
     enable = true;
     splash = false;
+    systemdTarget = "hyprland-session.target";
 
     wallpaper = [
       {
