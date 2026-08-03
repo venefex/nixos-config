@@ -4,7 +4,7 @@
   imports = [
 
     # Hardware scan results
-    ./modules/hardware-configuration.nix
+    ./hardware-configuration.nix
 
     # Core
     ./modules/core/boot.nix
