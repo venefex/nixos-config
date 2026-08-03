@@ -7,8 +7,7 @@
 
     qt6ctSettings = {
       Appearance = {
-        color_scheme_path = "~/alex/.local/share/color-schemes/BreezeDark.colors";
-        # color_scheme_path = "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
+        color_scheme_path = "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
         custom_palette = true;
         icon_theme = "breeze-dark";
         standard_dialogs = "default";

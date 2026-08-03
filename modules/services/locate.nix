@@ -4,7 +4,7 @@
   services.locate = {
     enable = true;
     package = pkgs.plocate;
-    interval = "hourly";
+    interval = "daily";
     prunePaths = [
       "/tmp"
       "/var/tmp"
