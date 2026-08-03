@@ -28,7 +28,6 @@
 
     # Hardware tools
     liquidctl
-    vial
 
     # Image format support
     icoutils
