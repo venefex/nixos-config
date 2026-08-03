@@ -19,8 +19,7 @@
     kdePackages.kservice
 
     # Qt / Gnome theming
-    # nur.repos.ilya-fedin.qt6ct # patched qt6ct to enable kde theming
-    kdePackages.breeze
+    # kdePackages.breeze
     kdePackages.breeze-gtk
     kdePackages.breeze-icons
     nwg-look
@@ -31,13 +30,6 @@
     kdePackages.qtimageformats
     kdePackages.kimageformats
     resvg
-
-    # (kdePackages.qt6ct.overrideAttrs (oldAttrs: {
-    #   patches = (oldAttrs.patches or [ ]) ++ [
-    #     ./patches/qt6ct-0.11.patch # Relative path works in pure mode
-    #   ];
-    #   name = "qt6ct-kde";
-    # }))
 
     # Misc
     runapp

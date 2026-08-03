@@ -13,14 +13,14 @@
       desktop = null;
     };
 
-    # dataFile."color-schemes/BreezeDark.colors".source =
-    #   "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
+    dataFile."color-schemes/BreezeDark.colors".source =
+      "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
 
-    # dataFile."color-schemes/BreezeLight.colors".source =
-    #   "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeLight.colors";
+    dataFile."color-schemes/BreezeLight.colors".source =
+      "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeLight.colors";
 
-    # dataFile."color-schemes/BreezeClassic.colors".source =
-    #   "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeClassic.colors";
+    dataFile."color-schemes/BreezeClassic.colors".source =
+      "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeClassic.colors";
   };
 
   home.activation.createProgrammingDir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
