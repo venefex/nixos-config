@@ -17,8 +17,7 @@
       };
 
       locations = {
-        auto_locate = false;
-        address = "Teramo, Italy";
+        auto_locate = true;
       };
     };
   };
