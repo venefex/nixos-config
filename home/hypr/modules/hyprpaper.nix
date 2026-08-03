@@ -11,7 +11,7 @@
       wallpaper = [
         {
           monitor = "DP-1";
-          path = "${../../wallpapers/mountains.jpg}";
+          path = "${../desktop/wallpapers/mountains.jpg}";
           fit_mode = "cover";
         }
       ];
