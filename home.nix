@@ -3,7 +3,7 @@
 {
   imports = [
     # Backup files cleaner
-    ./home/hm-backup-cleanup.nix
+    ./home/core/hm-backup-cleanup.nix
 
     # Desktop
     ./home/desktop/qt.nix
@@ -25,8 +25,8 @@
     ./home/programs/vscode.nix
     ./home/programs/yt-dlp.nix
 
-    ./home/packages.nix
-    ./home/variables.nix
+    ./home/core/packages.nix
+    ./home/core/variables.nix
   ];
 
   home.username = "alex";
