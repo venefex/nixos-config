@@ -79,6 +79,27 @@
             toolbar = true;
             bookmarks = [
               {
+                name = "NixOS";
+                bookmarks = [
+                  {
+                    name = "NixOS Packages (unstable)";
+                    url = "https://search.nixos.org/packages?channel=unstable/";
+                  }
+                  {
+                    name = "NixOS Options (unstable)";
+                    url = "https://search.nixos.org/options?channel=unstable";
+                  }
+                  {
+                    name = "Home Manager Options";
+                    url = "https://home-manager-options.extranix.com/?query=&release=master";
+                  }
+                  {
+                    name = "Searchix";
+                    url = "https://searchix.ovh/";
+                  }
+                ];
+              }
+              {
                 name = "YouTube";
                 url = "https://www.youtube.com/";
               }
