@@ -53,31 +53,6 @@
         SiteSettings = false;
       };
 
-      ManagedBookmarks = [
-        {
-          toplevel_name = "Bookmarks";
-          children = [
-            {
-              name = "NixOS";
-              url = "https://nixos.org";
-            }
-            {
-              name = "Home Manager";
-              url = "https://github.com/nix-community/home-manager";
-            }
-            {
-              name = "Mozilla";
-              children = [
-                {
-                  name = "Firefox";
-                  url = "https://www.mozilla.org/firefox/";
-                }
-              ];
-            }
-          ];
-        }
-      ];
-
       ExtensionSettings = {
         "*" = {
           installation_mode = "allowed";
@@ -95,6 +70,26 @@
     profiles.default = {
       id = 0;
       isDefault = true;
+
+      bookmarks = {
+        force = true;
+        settings = [
+          {
+            name = "Bookmarks Toolbar";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "YouTube";
+                url = "https://www.youtube.com/";
+              }
+              {
+                name = "Proton Mail";
+                url = "https://mail.proton.me/";
+              }
+            ];
+          }
+        ];
+      };
 
       settings = {
         # Restore previous session
