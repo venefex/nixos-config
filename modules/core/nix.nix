@@ -23,7 +23,7 @@ in
     optimise = weekly;
 
     gc = weekly // {
-      options = "--delete-older-than 30d";
+      options = "--delete-older-than +30"; # change to 30d once you stop doing 100 gen a day lol
     };
   };
 }
