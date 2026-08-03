@@ -23,6 +23,7 @@
 
       GUI = {
         ApplicationTheme = "dark";
+        FontSizeOffset = -6;
         TrayIconAppearance = "monochrome-light";
       };
     };
