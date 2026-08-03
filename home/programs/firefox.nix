@@ -8,7 +8,7 @@
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
       DisablePocket = true;
-      DisableFirefoxAccounts = false; # Set true if you don't use Sync
+      DisableFirefoxAccounts = true;
       DisableAccounts = false;
       DisableFormHistory = false;
       DisableProfileImport = true;
