@@ -53,6 +53,31 @@
         SiteSettings = false;
       };
 
+      ManagedBookmarks = [
+        {
+          toplevel_name = "Bookmarks";
+          children = [
+            {
+              name = "NixOS";
+              url = "https://nixos.org";
+            }
+            {
+              name = "Home Manager";
+              url = "https://github.com/nix-community/home-manager";
+            }
+            {
+              name = "Mozilla";
+              children = [
+                {
+                  name = "Firefox";
+                  url = "https://www.mozilla.org/firefox/";
+                }
+              ];
+            }
+          ];
+        }
+      ];
+
       ExtensionSettings = {
         "*" = {
           installation_mode = "allowed";
@@ -164,6 +189,9 @@
         "browser.translations.enable" = true;
         "browser.translations.automaticallyPopup" = true;
         "browser.translations.neverTranslateLanguages" = "en,it";
+
+        # Bookmarks toolbar
+        "browser.toolbars.bookmarks.visibility" = "always";
 
         # New tab
         "browser.newtabpage.activity-stream.hideLogo" = true;
