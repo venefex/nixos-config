@@ -57,7 +57,7 @@
               (final: prev: {
                 # Make both the top-level and the qt6Packages version point to the patched one
                 qt6ct = final.nur.repos.ilya-fedin.qt6ct;
-                kdePackages = prev.kdePackages.overrideScope (
+                qt6Packages = prev.qt6Packages.overrideScope (
                   qfinal: qprev: {
                     qt6ct = final.nur.repos.ilya-fedin.qt6ct;
                   }
