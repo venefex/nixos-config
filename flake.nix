@@ -65,8 +65,14 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
               users.alex = import ./home.nix;
               backupFileExtension = null;
+
+              sharedModules = [
+                inputs.noctalia.homeModules.default
+              ];
+
               backupCommand = pkgs.writeShellScript "hm-backup" ''
                 src="$1"
                 timestamp=$(date +%Y%m%d-%H%M%S)
