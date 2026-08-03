@@ -43,6 +43,7 @@ local terminal        = "runapp kitty"
 local fileManager     = "runapp dolphin"
 local textEditor      = "runapp code"
 local browser         = "runapp firefox"
+local browser2        = "runapp brave"
 local menu            = "runapp hyprlauncher"
 local passwordManager = "runapp keepassxc"
 local musicPlayer     = "runapp fooyin"
@@ -273,9 +274,11 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + F12",
-  hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exec_cmd(uwsm stop)'"))
+  hl.dsp.exec_cmd(
+  "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exec_cmd(uwsm stop)'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " = SHIFT + B", hl.dsp.exec_cmd(browser2))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(textEditor))
 hl.bind(mainMod .. " + K", hl.dsp.exec_cmd(passwordManager))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(musicPlayer))
@@ -332,8 +335,8 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 
 
 
-hl.bind(mainMod .. " + SHIFT + mouse:276", hl.dsp.window.move({ workspace = "+1" }))   -- Send to Next Workspace
-hl.bind(mainMod .. " + SHIFT + mouse:275", hl.dsp.window.move({ workspace = "-1" }))   -- Send to Previous Workspace
+hl.bind(mainMod .. " + SHIFT + mouse:276", hl.dsp.window.move({ workspace = "+1" })) -- Send to Next Workspace
+hl.bind(mainMod .. " + SHIFT + mouse:275", hl.dsp.window.move({ workspace = "-1" })) -- Send to Previous Workspace
 
 
 -- Scroll through existing workspaces with mainMod + scroll
