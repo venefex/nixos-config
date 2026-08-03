@@ -4,27 +4,28 @@
   programs.keepassxc = {
     enable = true;
 
-    # settings = {
-    #   General = {
-    #     ConfigVersion = 2;
-    #   };
+    settings = {
+      General = {
+        ConfigVersion = 2;
+      };
 
-    #   Security = {
-    #     LockDatabaseIdle = false;
-    #     LockDatabaseMinimize = false;
-    #     LockDatabaseScreenLock = true;
-    #     LockDatabaseSuspend = true;
-    #     IconDownloadFallback = true;
-    #   };
+      Security = {
+        LockDatabaseIdle = false;
+        LockDatabaseMinimize = false;
+        LockDatabaseScreenLock = true;
+        LockDatabaseSuspend = true;
+        IconDownloadFallback = true;
+      };
 
-    #   FdoSecrets = {
-    #     Enabled = false;
-    #   };
+      FdoSecrets = {
+        Enabled = false;
+      };
 
-    #   GUI = {
-    #     ApplicationTheme = "dark";
-    #     TrayIconAppearance = "monochrome-light";
-    #   };
-    # };
+      GUI = {
+        ApplicationTheme = "dark";
+        TrayIconAppearance = "monochrome-light";
+        ApplicationFontSize = 14;
+      };
+    };
   };
 }
