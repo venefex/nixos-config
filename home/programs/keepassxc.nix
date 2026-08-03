@@ -24,7 +24,6 @@
       GUI = {
         ApplicationTheme = "dark";
         TrayIconAppearance = "monochrome-light";
-        ApplicationFontSize = 14;
       };
     };
   };
