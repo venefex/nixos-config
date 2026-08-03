@@ -1,6 +1,13 @@
 {
   description = "NixOS configuration";
 
+  nixConfig = {
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     disko = {
@@ -18,12 +25,6 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
     };
-    nixConfig = {
-      extra-substituters = [ "https://noctalia.cachix.org" ];
-      extra-trusted-public-keys = [
-        "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
-      ];
-    };
   };
 
   outputs =
@@ -33,7 +34,6 @@
       disko,
       home-manager,
       nur,
-      noctalia,
       ...
     }@inputs:
     let
