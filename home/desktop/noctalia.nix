@@ -1,19 +1,24 @@
-{ ... }:
-
+{ inputs, ... }:
 {
-  programs.noctalia = {
-    enable = true;
+  home-manager.users.alex = {
+    imports = [
+      inputs.noctalia.homeModules.default
+    ];
 
-    settings = {
-      theme = {
-        mode = "dark";
-        source = "builtin";
-        builtin = "Catppuccin";
-      };
+    programs.noctalia = {
+      enable = true;
 
-      wallpaper = {
-        enabled = false;
-        default.path = "/path/to/wallpapers/wallpaper.png";
+      settings = {
+        theme = {
+          mode = "dark";
+          source = "builtin";
+          builtin = "Catppuccin";
+        };
+
+        wallpaper = {
+          enabled = false;
+          # default.path = "/path/to/wallpapers/wallpaper.png";
+        };
       };
     };
   };

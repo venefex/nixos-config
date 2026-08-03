@@ -15,6 +15,10 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia/cachix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -24,6 +28,7 @@
       disko,
       home-manager,
       nur,
+      noctalia,
       ...
     }@inputs:
     let
