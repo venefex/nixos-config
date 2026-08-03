@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     # Applications
     brave
+    fooyin
     kdePackages.ark
     kdePackages.dolphin
     kdePackages.konsole
