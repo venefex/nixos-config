@@ -25,6 +25,6 @@
     #     ApplicationTheme = "dark";
     #     TrayIconAppearance = "monochrome-light";
     #   };
-    };
+    # };
   };
 }
