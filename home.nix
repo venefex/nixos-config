@@ -47,7 +47,7 @@
     portalPackage = null;
     systemd.enable = false;
     systemd.variables = [ "--all" ];
-    extraConfig = builtins.readFile ./config/hypr/hyprland.lua;
+    extraConfig = builtins.readFile ./home/desktop/hypr/hyprland.lua;
   };
 
   programs = {
