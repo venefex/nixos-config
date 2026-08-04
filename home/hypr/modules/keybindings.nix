@@ -61,5 +61,21 @@
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(passwordManager)")
       ];
     }
+
+    # Video player
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + V"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(videoPlayer)")
+      ];
+    }
+
+    # Calculator
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + C"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(calculator)")
+      ];
+    }
   ];
 }

@@ -3,7 +3,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     window_rule = [
-            # kcalc
+      # kcalc
       {
         match.class = "org.kde.kcalc";
         float = true;
