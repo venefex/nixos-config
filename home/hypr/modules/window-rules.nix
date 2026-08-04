@@ -1,14 +1,29 @@
-{ lib, ... }:
+{ ... }:
+
 {
   wayland.windowManager.hyprland.settings = {
-    window_rule = {
-      match.class = "org.keepassxc.KeePassXC";
-      float = true;
-      size = [
-        "monitor_w*0.5"
-        "monitor_h*0.8"
-      ];
-      center = true;
-    };
+    window_rule = [
+      # KeePassXC
+      {
+        match.class = "org.keepassxc.KeePassXC";
+        float = true;
+        size = [
+          "monitor_w*0.5"
+          "monitor_h*0.8"
+        ];
+        center = true;
+      }
+
+      # mpv
+      {
+        match.class = "mpv";
+        float = true;
+        size = [
+          1920
+          1080
+        ];
+        center = true;
+      }
+    ];
   };
 }
