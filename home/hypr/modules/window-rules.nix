@@ -19,8 +19,8 @@
         match.class = "mpv";
         float = true;
         size = [
-          1920
-          1080
+          1280
+          720
         ];
         center = true;
       }
