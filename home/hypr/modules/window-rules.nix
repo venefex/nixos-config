@@ -8,7 +8,7 @@
         "monitor_w*0.4"
         "monitor_h*0.5"
       ];
-      centre = true;
+      center = true;
     };
   };
 }
