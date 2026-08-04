@@ -17,21 +17,21 @@
 -- require("myColors")
 
 
-------------------
----- MONITORS ----
-------------------
+-- ------------------
+-- ---- MONITORS ----
+-- ------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-  output       = "DP-1",
-  mode         = "highres@highrr",
-  position     = "0x0",
-  scale        = 1.5,
-  transform    = 0,
-  bitdepth     = 10,
-  cm           = "srgb",
-  supports_hdr = 0,
-})
+-- -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
+-- hl.monitor({
+--   output       = "DP-1",
+--   mode         = "highres@highrr",
+--   position     = "0x0",
+--   scale        = 1.5,
+--   transform    = 0,
+--   bitdepth     = 10,
+--   cm           = "srgb",
+--   supports_hdr = 0,
+-- })
 
 
 ---------------------

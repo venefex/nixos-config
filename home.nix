@@ -29,7 +29,7 @@
     ./home/core/variables.nix
 
     # Hypr
-    ./home/hypr/modules/hyprpaper.nix
+    ./home/hypr/hyprland.nix
 
     # Noctalia
     ./home/desktop/noctalia.nix
@@ -45,15 +45,6 @@
       retentionDays = 30;
       calendar = "weekly";
     };
-  };
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-    package = null;
-    portalPackage = null;
-    systemd.enable = false;
-    systemd.variables = [ "--all" ];
-    extraConfig = builtins.readFile ./home/hypr/hyprland.lua;
   };
 
   programs = {
