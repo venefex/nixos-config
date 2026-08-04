@@ -277,8 +277,8 @@ hl.bind(mainMod .. " + F12",
   hl.dsp.exec_cmd(
   "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exec_cmd(uwsm stop)'"))
 -- hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(browser2))
+-- hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+-- hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(browser2))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(textEditor))
 hl.bind(mainMod .. " + K", hl.dsp.exec_cmd(passwordManager))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(musicPlayer))
