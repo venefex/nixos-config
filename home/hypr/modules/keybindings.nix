@@ -2,28 +2,28 @@
 
 {
   wayland.windowManager.hyprland.settings.bind = [
+    # Terminal
     {
-      # Terminal
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + Return"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(terminal)")
       ];
     }
 
-    # Launcher
-    {
-      _args = [
-        (lib.generators.mkLuaInline ''mod .. " + Space"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(launcher)")
-      ];
-    }
+    # # Launcher
+    # {
+    #   _args = [
+    #     (lib.generators.mkLuaInline ''mod .. " + Space"'')
+    #     (lib.generators.mkLuaInline "hl.dsp.exec_cmd(launcher)")
+    #   ];
+    # }
 
-    # File manager
-    {
-      _args = [
-        (lib.generators.mkLuaInline ''mod .. " + E"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(fileManager)")
-      ];
-    }
+    # # File manager
+    # {
+    #   _args = [
+    #     (lib.generators.mkLuaInline ''mod .. " + E"'')
+    #     (lib.generators.mkLuaInline "hl.dsp.exec_cmd(fileManager)")
+    #   ];
+    # }
   ];
 }
