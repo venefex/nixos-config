@@ -39,14 +39,14 @@
 ---------------------
 
 -- Set programs that you use
-local terminal        = "runapp kitty"
-local fileManager     = "runapp dolphin"
-local textEditor      = "runapp code"
-local browser         = "runapp firefox"
-local browser2        = "runapp brave"
-local menu            = "runapp hyprlauncher"
-local passwordManager = "runapp keepassxc"
-local musicPlayer     = "runapp fooyin"
+-- local terminal        = "runapp kitty"
+-- local fileManager     = "runapp dolphin"
+-- local textEditor      = "runapp code"
+-- local browser         = "runapp firefox"
+-- local browser2        = "runapp brave"
+-- local menu            = "runapp hyprlauncher"
+-- local passwordManager = "runapp keepassxc"
+-- local musicPlayer     = "runapp fooyin"
 
 
 -------------------
@@ -276,7 +276,7 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + F12",
   hl.dsp.exec_cmd(
   "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exec_cmd(uwsm stop)'"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+-- hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(browser2))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(textEditor))
