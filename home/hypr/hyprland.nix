@@ -9,6 +9,7 @@
     ./modules/monitors.nix
     ./modules/hyprpaper.nix
     ./modules/variables.nix
+    ./modules/window-rules.nix
   ];
 
   wayland.windowManager.hyprland = {

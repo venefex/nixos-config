@@ -58,13 +58,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + P"'')
-        (lib.generators.mkLuaInline ''
-          hl.dsp.exec_cmd(passwordManager, {
-            float = true,
-            centre = true,
-            size  = { 900, 600 }
-          })
-        '')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(passwordManager)")
       ];
     }
   ];
