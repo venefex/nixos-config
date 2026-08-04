@@ -42,6 +42,9 @@
     # Music players
     fooyin
 
+    # Task managers
+    mission-center
+
     # Terminals
     kdePackages.konsole
 
