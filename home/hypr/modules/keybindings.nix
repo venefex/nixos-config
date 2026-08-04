@@ -5,7 +5,7 @@
     # Terminal
     {
       _args = [
-        (lib.generators.mkLuaInline ''mod .. " + Return"'')
+        (lib.generators.mkLuaInline "mod .. \" + Return\"")
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(terminal)")
       ];
     }
