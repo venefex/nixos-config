@@ -3,13 +3,6 @@
 {
   wayland.windowManager.hyprland.settings = {
     window_rule = [
-      # qalculate-gtk
-      {
-        match.class = "qalculate-gtk";
-        float = true;
-        center = true;
-      }
-
       # qalculate-qt
       {
         match.class = "qalculate-qt";
