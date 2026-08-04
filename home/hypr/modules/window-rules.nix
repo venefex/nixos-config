@@ -3,6 +3,13 @@
 {
   wayland.windowManager.hyprland.settings = {
     window_rule = [
+            # kcalc
+      {
+        match.class = "org.kde.kcalc";
+        float = true;
+        center = true;
+      }
+
       # KeePassXC
       {
         match.class = "org.keepassxc.KeePassXC";
