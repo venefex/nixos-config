@@ -14,7 +14,9 @@
   wayland.windowManager.hyprland = {
     settings = {
       config = {
-
+        mod = {
+          _var = "SUPER";
+        };
       };
     };
 
