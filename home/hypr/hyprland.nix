@@ -29,6 +29,6 @@
       };
     };
 
-    extraConfig = builtins.readFile ./home/hypr/hyprland.lua;
+    extraConfig = builtins.readFile ./hyprland.lua;
   };
 }
