@@ -17,6 +17,7 @@
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(launcher)")
       ];
     }
+
     # File manager
     {
       _args = [
