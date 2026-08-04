@@ -283,7 +283,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(textEditor))
 hl.bind(mainMod .. " + K", hl.dsp.exec_cmd(passwordManager))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(musicPlayer))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+-- hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
