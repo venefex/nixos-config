@@ -21,6 +21,7 @@
     # ./modules/home/programs/librewolf.nix
     ./home/programs/micro.nix
     ./home/programs/mpv.nix
+    ./home/programs/qalculate.nix
     ./home/programs/tealdeer.nix
     ./home/programs/vscode.nix
     ./home/programs/yt-dlp.nix
