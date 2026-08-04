@@ -5,6 +5,7 @@
 
   imports = [
     ./modules/core.nix
+    ./modules/keybindings.nix
     ./modules/monitors.nix
     ./modules/hyprpaper.nix
   ];
