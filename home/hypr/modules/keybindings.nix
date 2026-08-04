@@ -10,6 +10,20 @@
       ];
     }
 
+    # Text editors
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + T"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(textEditor)")
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + T"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(textEditor2)")
+      ];
+    }
+
     # Launcher
     {
       _args = [
@@ -26,19 +40,31 @@
       ];
     }
 
-        # Browser
+    # Browsers
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + B"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(browser)")
       ];
     }
-
-            # Browser 2
     {
       _args = [
-        (lib.generators.mkLuaInline ''mod .. " +SHIFT + B"'')
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + B"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(browser2)")
+      ];
+    }
+
+    # Password manager
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + P"'')
+        (lib.generators.mkLuaInline ''
+          hl.dsp.exec_cmd(passwordManager, {
+            float = true,
+            centre = true,
+            size  = { 900, 600 }
+          })
+        '')
       ];
     }
   ];
