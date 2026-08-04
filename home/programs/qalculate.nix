@@ -3,6 +3,6 @@
 {
   programs.qalculate = {
     enable = true;
-    package = pkgs.qalculate-qt;
+    package = pkgs.qalculate-gtk;
   };
 }
