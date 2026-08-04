@@ -49,7 +49,7 @@
     };
 
     calculator = {
-      _var = "runapp qalculate-qt";
+      _var = "runapp qalculate-gtk";
     };
 
     colorPicker = {
