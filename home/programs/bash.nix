@@ -59,9 +59,6 @@
     ];
 
     bashrcExtra = ''
-      # Prompt configuration
-      PROMPT_DIRTRIM=2
-
       # Editor
       if command -v micro >/dev/null 2>&1; then
           export EDITOR="micro"
