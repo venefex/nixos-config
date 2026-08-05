@@ -14,11 +14,11 @@
       {
         match.class = "org.keepassxc.KeePassXC";
         float = true;
+        center = true;
         size = [
           "monitor_w*0.5"
           "monitor_h*0.8"
         ];
-        center = true;
       }
 
       # MissionCenter
@@ -26,17 +26,21 @@
         match.class = "io.missioncenter.MissionCenter";
         float = true;
         center = true;
+        size = [
+          1280
+          720
+        ];
       }
 
       # mpv
       {
         match.class = "mpv";
         float = true;
+        center = true;
         size = [
           1280
           720
         ];
-        center = true;
       }
     ];
   };
