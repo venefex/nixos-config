@@ -17,12 +17,13 @@
       };
 
       extensions = with pkgs.vscode-extensions; [
-        vscode-icons-team.vscode-icons
         christian-kohler.path-intellisense
-        sumneko.lua
-        tamasfe.even-better-toml
+        foxundermoon.shell-format
         jnoortheen.nix-ide
         mechatroner.rainbow-csv
+        sumneko.lua
+        tamasfe.even-better-toml
+        vscode-icons-team.vscode-icons
       ];
     };
   };

@@ -13,7 +13,7 @@
     shellAliases = {
       # System
       cat = "bat";
-      free = "free -h"; # Shows system memory usage in human-readable format.
+      free = "free -h";
 
       # Reboot and poweroff to bios
       reboot-bios = "systemctl reboot --firmware-setup";
@@ -59,6 +59,9 @@
     ];
 
     bashrcExtra = ''
+      # Prompt configuration
+      PROMPT_DIRTRIM=2
+
       # Editor
       if command -v micro >/dev/null 2>&1; then
           export EDITOR="micro"
@@ -66,16 +69,15 @@
           export EDITOR="nano"
       fi
 
-      # If installed launches btop for interactive process monitoring
-      if command -v btop >/dev/null 2>&1; then
-          alias top='btop'
+      # System monitoring and utility aliases
+      if command -v htop >/dev/null 2>&1; then
+          alias top='htop'  # If installed launches htop for interactive process monitoring .
+      fi
+      if command -v tree >/dev/null 2>&1; then
+          alias tree='tree -C'  # If installed displays directory tree structure with color highlighting.
       fi
 
-      # Set to 0 for plain-text separators without Powerline symbols
-      export USE_POWERLINE=1
-
-      # Prompt configuration
-      PROMPT_DIRTRIM=2
+      source ${./bash/prompt.sh}
     '';
 
     initExtra = ''
