@@ -27,6 +27,7 @@
     file
     lm_sensors
     lsof
+    ntfs-3g
     pciutils
     stress-ng
     sysstat
