@@ -58,6 +58,6 @@
 
     taskManager = {
       _var = "runapp missioncenter";
-    }
+    };
   };
 }
