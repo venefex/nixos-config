@@ -27,8 +27,8 @@
         float = true;
         center = true;
         size = [
-          "monitor_w*0.6"
-          "monitor_h*0.6"
+          "monitor_w*0.5"
+          "monitor_h*0.5"
         ];
       }
 
@@ -38,8 +38,8 @@
         float = true;
         center = true;
         size = [
-          "monitor_w*0.5"
-          "monitor_h*0.5"
+          1280
+          720
         ];
       }
     ];
