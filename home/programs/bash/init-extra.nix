@@ -1,7 +1,8 @@
 { pkgs, ... }:
 
 {
-  programs.bash.initExtra = ''
+  programs.bash.initExtra =
+    ''
     # Source git prompt for __git_ps1
     source ${pkgs.git}/share/git/contrib/completion/git-prompt.sh
 
