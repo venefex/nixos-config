@@ -5,7 +5,7 @@
 
   imports = [
     ./modules/core.nix
-    ./modules/keybindings.nix
+    ./modules/keybinds.nix
     ./modules/monitors.nix
     ./modules/hyprpaper.nix
     ./modules/variables.nix
