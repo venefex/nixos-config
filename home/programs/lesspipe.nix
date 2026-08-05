@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  programs.lesspipe = {
+    enable = true;
+  };
+}
