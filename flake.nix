@@ -11,13 +11,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia = {
       url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -27,6 +31,7 @@
       nixpkgs,
       disko,
       home-manager,
+      sops-nix,
       nur,
       ...
     }@inputs:
@@ -80,6 +85,8 @@
               '';
             };
           })
+
+          sops-nix.nixosModules.sops
 
           nur.modules.nixos.default
 
