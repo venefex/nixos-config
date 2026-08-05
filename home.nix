@@ -13,6 +13,7 @@
     # Programs
     ./home/programs/bash.nix
     ./home/programs/bat.nix
+    ./home/programs/btop.nix
     # ./home/programs/cmus.nix
     ./home/programs/firefox.nix
     ./home/programs/git.nix
