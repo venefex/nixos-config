@@ -81,7 +81,7 @@
     # Task manager
     {
       _args = [
-        (lib.generators.mkLuaInline ''"CTRL + SHIFT + ESC"'')
+        (lib.generators.mkLuaInline ''"CTRL + SHIFT + ESCAPE"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(taskManager)")
       ];
     }
