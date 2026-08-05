@@ -74,7 +74,7 @@
           alias tree='tree -C'  # If installed displays directory tree structure with color highlighting.
       fi
 
-      # import ps1 prompt
+      # Import ps1 prompt
       source ${./bash/prompt.sh}
     '';
 
