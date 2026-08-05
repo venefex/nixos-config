@@ -66,6 +66,11 @@
           export EDITOR="nano"
       fi
 
+      # If installed launches btop for interactive process monitoring
+      if command -v btop >/dev/null 2>&1; then
+          alias top='btop'
+      fi
+
       # Set to 0 for plain-text separators without Powerline symbols
       export USE_POWERLINE=1
 
