@@ -1,6 +1,7 @@
 { ... }:
 
 {
+
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -9,12 +10,12 @@
       "checkwinsize" # Better window resizing
       "globstar" # Recursive globbing
     ];
-
-    imports = [
-      ./bash/aliases.nix
-      ./bash/bashrc-extra.nix
-      ./bash/history.nix
-      ./bash/init-extra.nix
-    ];
   };
+
+  imports = [
+    ./bash/aliases.nix
+    ./bash/bashrc-extra.nix
+    ./bash/history.nix
+    ./bash/init-extra.nix
+  ];
 }
