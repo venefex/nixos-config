@@ -15,31 +15,31 @@ PROMPT_DIRTRIM=2
 # Function to detect truecolor (24-bit color) support in the terminal.
 # Returns 0 if supported, 1 otherwise, by checking environment variables and terminal capabilities.
 has_truecolor() {
-    # Explicit truecolor hints
-    case ${COLORTERM,,} in
-        truecolor|24bit|24-bit)
-            return 0
-            ;;
-    esac
+  # Explicit truecolor hints
+  case ${COLORTERM,,} in
+  truecolor | 24bit | 24-bit)
+    return 0
+    ;;
+  esac
 
-    # Terminfo truecolor capabilities
-    if command -v infocmp >/dev/null 2>&1; then
-        if infocmp -1 2>/dev/null | grep -qE '(^|,)(Tc|RGB)($|,)'; then
-            return 0
-        fi
+  # Terminfo truecolor capabilities
+  if command -v infocmp >/dev/null 2>&1; then
+    if infocmp -1 2>/dev/null | grep -qE '(^|,)(Tc|RGB)($|,)'; then
+      return 0
     fi
+  fi
 
-    # Common TERM values known to imply truecolor
-    case ${TERM,,} in
-        *-direct|*-truecolor|*-24bit|*-24bits|*-256color)
-            return 0
-            ;;
-        alacritty|foot|ghostty|kitty|konsole|wezterm|iterm2)
-            return 0
-            ;;
-    esac
+  # Common TERM values known to imply truecolor
+  case ${TERM,,} in
+  *-direct | *-truecolor | *-24bit | *-24bits | *-256color)
+    return 0
+    ;;
+  alacritty | foot | ghostty | kitty | konsole | wezterm | iterm2)
+    return 0
+    ;;
+  esac
 
-    return 1
+  return 1
 }
 
 # Fallback function for simple Git branch parsing (used in "simple" PROMPT_STYLE)
