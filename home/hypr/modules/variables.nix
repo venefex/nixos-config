@@ -55,5 +55,9 @@
     colorPicker = {
       _var = "runapp hyprpicker --autocopy --format=hex";
     };
+
+    taskManager = {
+      _var = "runapp missioncenter";
+    }
   };
 }

@@ -21,6 +21,13 @@
         center = true;
       }
 
+      # MissionCenter
+      {
+        match.class = "io.missioncenter.MissionCenter";
+        float = true;
+        center = true;
+      }
+
       # mpv
       {
         match.class = "mpv";

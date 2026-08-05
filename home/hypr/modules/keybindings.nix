@@ -77,5 +77,13 @@
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(calculator)")
       ];
     }
+
+    # Task manager
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''"CTRL + SHIFT + ESC"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(taskManager)")
+      ];
+    }
   ];
 }
