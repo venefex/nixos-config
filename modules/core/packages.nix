@@ -20,6 +20,7 @@
     zstd
 
     # System tools
+    age
     ethtool
     evtest
     fd
