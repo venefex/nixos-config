@@ -18,6 +18,7 @@
     ./home/programs/git.nix
     ./home/programs/keepassxc.nix
     ./home/programs/kitty.nix
+    ./home/programs/lesspipe.nix
     # ./modules/home/programs/librewolf.nix
     ./home/programs/micro.nix
     ./home/programs/mpv.nix
