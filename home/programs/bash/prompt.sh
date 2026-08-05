@@ -12,6 +12,11 @@ PROMPT_STYLE="breadcrumb"
 # Prompt: multi-line with username@host, path (trimmed), and Git info
 PROMPT_DIRTRIM=2
 
+# Git prompt settings: Enable indicators for dirty state, stashed changes, and untracked files in the Git prompt.
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+
 # Function to detect truecolor (24-bit color) support in the terminal.
 # Returns 0 if supported, 1 otherwise, by checking environment variables and terminal capabilities.
 has_truecolor() {
