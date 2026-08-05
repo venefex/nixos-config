@@ -44,6 +44,7 @@
     '';
 
     initExtra = ''
+      # Git functions
       gac() {
         git add . || return
         read -rp "Commit message: " msg
