@@ -38,7 +38,7 @@
     vim
 
     # CLI utilities
-    btop
+    htop
     eza
     fastfetch
     hunspellDicts.en-us
