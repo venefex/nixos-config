@@ -73,8 +73,6 @@
       if command -v tree >/dev/null 2>&1; then
           alias tree='tree -C'  # If installed displays directory tree structure with color highlighting.
       fi
-
-      source ${./bash/prompt.sh}
     '';
 
     initExtra = ''
