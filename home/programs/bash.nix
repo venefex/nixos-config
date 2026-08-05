@@ -15,6 +15,14 @@
       nupl = "systemctl status nixos-upgrade.service";
     };
 
+    bashrcExtra = ''
+      if command -v micro >/dev/null 2>&1; then
+          export EDITOR="micro"
+      else
+          export EDITOR="nano"
+      fi
+    '';
+
     initExtra = ''
       gac() {
         git add . || return
