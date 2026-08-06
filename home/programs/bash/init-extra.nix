@@ -12,23 +12,30 @@
       git commit -m "$msg"
     }
 
-    nixos-update() (
-      cd ~/.nixos-config || exit
+    nixos-update() {
+      local original_dir
+      original_dir=$(pwd) || return 1
 
-      nix flake update || exit
+      cd ~/.nixos-config || return 1
 
-      git diff --quiet -- flake.lock && {
+      nix flake update || { cd "$original_dir"; return 1; }
+
+      if git diff --quiet -- flake.lock; then
         echo "flake.lock is already up to date."
-        exit 0
-      }
+        cd "$original_dir"
+        return 0
+      fi
 
       git diff -- flake.lock
       read -rp "Continue with rebuild? [y/N] " answer
-      [[ "$answer" =~ ^[Yy]$ ]] || exit 0
+      [[ "$answer" =~ ^[Yy]$ ]] || { cd "$original_dir"; return 0; }
 
-      sudo nixos-rebuild switch --flake . &&
-      git add flake.lock &&
-      git commit -m "Update system inputs"
-    )
+      if sudo nixos-rebuild switch --flake .; then
+        git add flake.lock
+        git commit -m "Update system inputs"
+      fi
+
+      cd "$original_dir"
+    }
   '';
 }
