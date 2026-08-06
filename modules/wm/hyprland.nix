@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.hyprland = {
@@ -6,21 +6,12 @@
     withUWSM = true;
   };
 
-  xdg.portal = {
-    enable = true;
+  xdg.portal.extraPortals = lib.mkAfter [
+    pkgs.kdePackages.xdg-desktop-portal-kde
+  ];
 
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-      kdePackages.xdg-desktop-portal-kde
-    ];
-
-    config.common = {
-      default = [
-        "hyprland"
-        "kde"
-      ];
-      "org.freedesktop.impl.portal.FileChooser" = "kde";
-    };
+  xdg.portal.config.common = {
+    "org.freedesktop.impl.portal.FileChooser" = "kde";
   };
 
   environment.sessionVariables = {
