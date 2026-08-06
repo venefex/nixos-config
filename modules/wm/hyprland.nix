@@ -22,4 +22,8 @@
       "org.freedesktop.impl.portal.FileChooser" = "kde";
     };
   };
+
+  environment.sessionVariables = {
+    GTK_USE_PORTAL = "1";
+  };
 }
