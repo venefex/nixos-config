@@ -37,7 +37,7 @@ in
     ./home/desktop/xdg.nix
 
     # Hyprland
-    ./home/hypr/hyprland.nix
+    ./home/hyprland/hyprland.nix
 
     # Noctalia
     ./home/desktop/noctalia.nix
