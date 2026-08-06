@@ -11,7 +11,7 @@
 
     extraPortals = with pkgs; [
       xdg-desktop-portal-hyprland
-      xdg-desktop-portal-kde
+      kdePackages.xdg-desktop-portal-kde
     ];
 
     config.common = {
