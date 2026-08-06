@@ -14,6 +14,7 @@
         "files.insertFinalNewline" = true;
         "files.trimFinalNewlines" = true;
         "files.trimTrailingWhitespace" = true;
+        "redhat.telemetry.enabled" = false;
       };
 
       extensions = with pkgs.vscode-extensions; [
