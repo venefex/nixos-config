@@ -1,12 +1,19 @@
-# Ignore build outputs from performing a nix-build or `nix build` command
+# Build outputs from performing a nix-build or `nix build` command
 result
 result-*
 
-# Ignore automatically generated direnv output
+# Automatically generated direnv output
 .direnv
 
-# Ignore NixOS interactive test driver history
+# NixOS interactive test driver history
 **/.nixos-test-history
 
-# Ignore hardware-specific settings created during system installation
+# Secrets
+.config/sops/age/
+.config/sops/age/keys.txt
+keys.txt
+*.key
+*.age
+
+# Hardware-specific settings created during system installation
 # **/hardware-configuration.nix
