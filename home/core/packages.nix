@@ -7,9 +7,6 @@
     # Browsers
     brave
 
-    # Calculators
-    kdePackages.kcalc
-
     # Diff / compare tools
     kdePackages.kompare
 
