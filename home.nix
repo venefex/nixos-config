@@ -27,6 +27,7 @@
     # ./modules/home/programs/librewolf.nix
     ./home/programs/micro.nix
     ./home/programs/mpv.nix
+    ./home/programs/neovim.nix
     ./home/programs/qalculate.nix
     ./home/programs/rofi.nix
     ./home/programs/tealdeer.nix
