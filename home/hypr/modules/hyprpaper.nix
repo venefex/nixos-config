@@ -13,7 +13,6 @@
         path = "${../../desktop/wallpapers/mountains.jpg}";
         fit_mode = "cover";
       };
-
     };
   };
 }
