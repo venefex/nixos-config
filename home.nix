@@ -1,16 +1,12 @@
-{ lib, ... }:
+{ config, pkgs, ... }:
 
-let
-  programsDir = ./home/programs;
-  programModules = lib.mapAttrsToList (name: _: programsDir + "/${name}") (
-    lib.filterAttrs (name: type: type == "regular" && lib.hasSuffix ".nix" name) (
-      builtins.readDir programsDir
-    )
-  );
-in
 {
   imports = [
-    # Backup files cleaner
+    # Core
+    ./home/core/packages.nix
+    ./home/core/variables.nix
+
+    # Services
     ./home/services/backup-cleanup.nix
 
     # Desktop
@@ -18,14 +14,28 @@ in
     ./home/desktop/cursor.nix
     ./home/desktop/xdg.nix
 
-    # Programs (every .nix file under home/programs/)
-  ]
-  ++ programModules
-  ++ [
-    ./home/core/packages.nix
-    ./home/core/variables.nix
+    # Programs
+    ./home/programs/bash.nix
+    ./home/programs/bat.nix
+    ./home/programs/btop.nix
+    # ./home/programs/cmus.nix
+    ./home/programs/firefox.nix
+    ./home/programs/git.nix
+    ./home/programs/keepassxc.nix
+    ./home/programs/kitty.nix
+    ./home/programs/lesspipe.nix
+    # ./modules/home/programs/librewolf.nix
+    ./home/programs/micro.nix
+    ./home/programs/mpv.nix
+    ./home/programs/qalculate.nix
+    ./home/programs/rofi.nix
+    ./home/programs/tealdeer.nix
+    ./home/programs/vscode.nix
+    ./home/programs/yt-dlp.nix
+
     # Hypr
     ./home/hypr/hyprland.nix
+
     # Noctalia
     ./home/desktop/noctalia.nix
   ];
