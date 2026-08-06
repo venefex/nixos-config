@@ -10,9 +10,6 @@ let
 in
 {
   imports = [
-    # Core hm settings
-    ./home/core/core.nix
-
     # Backup files cleaner
     ./home/services/backup-cleanup.nix
 
