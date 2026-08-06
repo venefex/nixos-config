@@ -13,6 +13,14 @@
   ];
 
   wayland.windowManager.hyprland = {
+    enable = true;
+    package = null;
+    portalPackage = null;
+    systemd.enable = false;
+    systemd.variables = [ "--all" ];
+  };
+
+  wayland.windowManager.hyprland = {
     settings = {
       config = {
       };
