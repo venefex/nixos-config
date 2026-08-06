@@ -2,7 +2,7 @@
 
 {
   wayland.windowManager.hyprland.settings = {
-    # Terminal (floating workspace)
+    # Terminal (floating special workspace)
     window_rule = [
       {
         match.class = "kitty";

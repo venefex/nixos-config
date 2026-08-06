@@ -6,7 +6,7 @@
       "hyprland.start"
       (lib.generators.mkLuaInline ''
         function()
-          hl.exec_cmd("kitty", {
+          hl.exec_cmd("runapp kitty", {
             workspace = "special:terminal silent",
             float = true,
             center = true,
