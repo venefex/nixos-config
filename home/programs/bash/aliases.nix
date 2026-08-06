@@ -29,11 +29,11 @@
     "..." = "cd ../.."; # Navigates up two directory levels.
 
     # File management
-    cp = "cp -i'"; # Copies files with interactive prompt before overwriting.
-    mv = "mv -i'"; # Moves or renames files with interactive prompt before overwriting.
-    rm = "rm -i'"; # Removes files with interactive confirmation prompt.
-    mkdir = "mkdir -p'"; # Creates directories, including parent directories if needed.
-    df = "df -h'"; # Displays disk space usage in human-readable format.
+    cp = "cp -i"; # Copies files with interactive prompt before overwriting.
+    mv = "mv -i"; # Moves or renames files with interactive prompt before overwriting.
+    rm = "rm -i"; # Removes files with interactive confirmation prompt.
+    mkdir = "mkdir -p"; # Creates directories, including parent directories if needed.
+    df = "df -h"; # Displays disk space usage in human-readable format.
 
     # NixOS
     nrs = "sudo nixos-rebuild switch --flake ~/.nixos-config";
