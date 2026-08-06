@@ -13,6 +13,7 @@
     ./modules/core/packages.nix
     ./modules/core/users.nix
     ./modules/core/locale.nix
+    ./modules/core/xdg.nix
 
     # Hardware
     ./modules/hardware/amd-gpu.nix
