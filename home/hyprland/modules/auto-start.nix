@@ -6,11 +6,10 @@
       "hyprland.start"
       (lib.generators.mkLuaInline ''
         function()
-          hl.exec_cmd("runapp kitty", {
+          -- Prefer plain kitty so the PID is the window process.
+          -- --class gives a stable match for the window rule.
+          hl.exec_cmd("kitty --class scratch-terminal", {
             workspace = "special:terminal silent",
-            float = true,
-            center = true,
-            size = { "monitor_w*0.5", "monitor_h*0.5" },
           })
         end
       '')

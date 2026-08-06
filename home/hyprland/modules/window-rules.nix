@@ -5,16 +5,14 @@
     # Terminal (floating special workspace)
     window_rule = [
       {
-        match.class = "kitty";
-        match.workspace = "special:terminal";
+        match.class = "scratch-terminal";
+        workspace = "special:terminal";
         float = true;
         center = true;
-
         size = [
           "monitor_w*0.5"
           "monitor_h*0.5"
         ];
-        workspace = "special:terminal";
       }
 
       # qalculate-gtk
