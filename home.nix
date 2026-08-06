@@ -28,6 +28,9 @@ in
     # Services
     ./home/services/backup-cleanup.nix
 
+    # Secrets
+    ./home/security/secrets.nix
+
     # Desktop
     ./home/desktop/qt.nix
     ./home/desktop/cursor.nix
