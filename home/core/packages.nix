@@ -26,6 +26,7 @@
 
     # Hardware tools
     liquidctl
+    pwvucontrol
 
     # Image format support
     icoutils
@@ -53,7 +54,6 @@
     nwg-look
 
     # Utilities
-    pwvucontrol
     runapp
   ];
 }
