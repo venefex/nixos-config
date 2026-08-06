@@ -42,6 +42,17 @@
           "monitor_h*0.5"
         ];
       }
+
+      # pwvucontrol
+      {
+        match.class = "com.saivert.pwvucontrol";
+        float = true;
+        center = true;
+        size = [
+          "monitor_w*0.5"
+          "monitor_h*0.5"
+        ];
+      }
     ];
   };
 }
