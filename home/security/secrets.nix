@@ -13,6 +13,16 @@
 
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
+
+    settings = {
+      "*" = {
+        AddKeysToAgent = "yes";
+        ForwardAgent = "no";
+        ServerAliveInterval = 60;
+        ServerAliveCountMax = 3;
+      };
+    };
 
     matchBlocks."github.com" = {
       hostname = "github.com";
