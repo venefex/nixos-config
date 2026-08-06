@@ -76,6 +76,7 @@
 
               sharedModules = [
                 inputs.noctalia.homeModules.default
+                inputs.sops-nix.homeManagerModules.sops
               ];
 
               backupCommand = pkgs.writeShellScript "hm-backup" ''
