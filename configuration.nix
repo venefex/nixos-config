@@ -24,7 +24,6 @@
     # Services
     ./modules/services/disk-management.nix
     ./modules/services/locate.nix
-    ./modules/services/openssh.nix
     ./modules/services/pipewire.nix
     ./modules/services/power-management.nix
     ./modules/services/printing.nix

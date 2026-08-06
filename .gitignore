@@ -8,12 +8,22 @@ result-*
 # NixOS interactive test driver history
 **/.nixos-test-history
 
-# Secrets
-.config/sops/age/
-.config/sops/age/keys.txt
-keys.txt
+# SOPS / age private keys
+**/.config/sops/age/
 *.key
 *.age
+keys.txt
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.bak
+*~
 
 # Hardware-specific settings created during system installation
 # **/hardware-configuration.nix
