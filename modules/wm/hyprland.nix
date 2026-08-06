@@ -6,7 +6,7 @@
     withUWSM = true;
   };
 
-  xdg.portal.extraPortals = lib.mkAfter [
+  xdg.portal.extraPortals = [
     pkgs.kdePackages.xdg-desktop-portal-kde
   ];
 
