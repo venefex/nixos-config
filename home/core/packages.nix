@@ -53,7 +53,7 @@
     nwg-look
 
     # Utilities
-    pavucontrol
+    pwvucontrol
     runapp
   ];
 }

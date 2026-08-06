@@ -59,5 +59,9 @@
     taskManager = {
       _var = "runapp missioncenter";
     };
+
+    volumeControl = {
+      _var = "runapp pwvucontrol";
+    };
   };
 }
