@@ -1,0 +1,10 @@
+keys:
+  - &admin age1tr6awt96e86acrpuyvcct5jj5xa34u7rp2p4wkl48cxwpsnqrqzshy9ypa   # your personal public key
+  - &host  age1t0dj6l4gyzppd37m7pf3hhhptygwa7dxdcqgnd4w74hney9jg9ps02fdqv   # machine public key
+
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+          - *admin
+          - *host

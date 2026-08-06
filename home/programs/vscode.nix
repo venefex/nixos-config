@@ -21,6 +21,7 @@
         foxundermoon.shell-format
         jnoortheen.nix-ide
         mechatroner.rainbow-csv
+        redhat.vscode-yaml
         sumneko.lua
         tamasfe.even-better-toml
         vscode-icons-team.vscode-icons
