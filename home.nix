@@ -1,9 +1,28 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
+let
+  programsDir = ./home/programs;
+
+  # Basenames to skip (with or without the .nix suffix)
+  excludedPrograms = [
+    "librewolf.nix"
+  ];
+
+  programModules = lib.mapAttrsToList (name: _: programsDir + "/${name}") (
+    lib.filterAttrs (
+      name: type: type == "regular" && lib.hasSuffix ".nix" name && !(lib.elem name excludedPrograms)
+    ) (builtins.readDir programsDir)
+  );
+in
 {
   imports = [
     # Core
-    ./home/core/packages.nix
+    ./home/core/users.nix
     ./home/core/variables.nix
 
     # Services
@@ -14,35 +33,17 @@
     ./home/desktop/cursor.nix
     ./home/desktop/xdg.nix
 
-    # Programs
-    ./home/programs/bash.nix
-    ./home/programs/bat.nix
-    ./home/programs/btop.nix
-    # ./home/programs/cmus.nix
-    ./home/programs/firefox.nix
-    ./home/programs/git.nix
-    ./home/programs/keepassxc.nix
-    ./home/programs/kitty.nix
-    ./home/programs/lesspipe.nix
-    # ./modules/home/programs/librewolf.nix
-    ./home/programs/micro.nix
-    ./home/programs/mpv.nix
-    ./home/programs/neovim.nix
-    ./home/programs/qalculate.nix
-    ./home/programs/rofi.nix
-    ./home/programs/tealdeer.nix
-    ./home/programs/vscode.nix
-    ./home/programs/yt-dlp.nix
-
-    # Hypr
+    # Hyprland
     ./home/hypr/hyprland.nix
 
     # Noctalia
     ./home/desktop/noctalia.nix
-  ];
 
-  home.username = "alex";
-  home.homeDirectory = "/home/alex";
+  ] # Programs (auto-imported, minus exclusions)
+  ++ programModules
+  ++ [
+    ./home/core/packages.nix
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
