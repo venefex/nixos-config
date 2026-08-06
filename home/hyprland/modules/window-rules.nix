@@ -2,7 +2,21 @@
 
 {
   wayland.windowManager.hyprland.settings = {
+    # Terminal (floating workspace)
     window_rule = [
+      {
+        match.class = "kitty";
+        match.workspace = "special:terminal";
+        float = true;
+        center = true;
+
+        size = [
+          "monitor_w*0.5"
+          "monitor_h*0.5"
+        ];
+        workspace = "special:terminal";
+      }
+
       # qalculate-gtk
       {
         match.class = "qalculate-gtk";
