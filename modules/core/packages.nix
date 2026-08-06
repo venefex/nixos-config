@@ -30,6 +30,7 @@
     lsof
     ntfs3g
     pciutils
+    sops
     stress-ng
     sysstat
     usbutils
