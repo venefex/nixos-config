@@ -34,8 +34,10 @@
     # Desktop
     ./modules/desktop/fonts.nix
     ./modules/desktop/greetd.nix
-    ./modules/desktop/hyprland.nix
     ./modules/desktop/storage.nix
+
+    # Window managers
+    ./modules/desktop/hyprland.nix
   ];
 
   system = {
