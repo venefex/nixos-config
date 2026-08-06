@@ -36,6 +36,7 @@
     df = "df -h"; # Displays disk space usage in human-readable format.
 
     # NixOS
+    nfu = "nix flake update --flake ~/.nixos-config";
     nrs = "sudo nixos-rebuild switch --flake ~/.nixos-config";
     nrsv = "sudo nixos-rebuild switch --flake ~/.nixos-config --verbose";
     nrsr = "sudo nixos-rebuild switch --flake ~/.nixos-config --rollback";
