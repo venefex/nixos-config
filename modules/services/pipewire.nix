@@ -12,14 +12,14 @@
       "99-clock-rate" = {
         "context.properties" = {
           "default.clock.rate" = 48000;
-          "default.clock.allowed-rates" = [
-            44100
-            88200
-            176400
-            48000
-            96000
-            192000
-          ];
+          # "default.clock.allowed-rates" = [
+          #   44100
+          #   88200
+          #   176400
+          #   48000
+          #   96000
+          #   192000
+          # ];
         };
       };
     };
