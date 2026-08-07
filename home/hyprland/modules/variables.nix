@@ -24,6 +24,14 @@
       _var = "runapp rofi -show drun -show-icons";
     };
 
+    launcherCalc = {
+      _var = "runapp rofi -show calc -modi calc -no-show-match -no-sort";
+    };
+
+    clipHistory = {
+      _var = "runapp cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+    };
+
     fileManager = {
       _var = "runapp dolphin";
     };
@@ -56,10 +64,6 @@
       _var = "runapp qalculate-gtk";
     };
 
-    colorPicker = {
-      _var = "runapp hyprpicker --autocopy --format=hex";
-    };
-
     taskManager = {
       _var = "runapp missioncenter";
     };
@@ -67,5 +71,10 @@
     volumeControl = {
       _var = "runapp pwvucontrol";
     };
+
+    colorPicker = {
+      _var = "runapp hyprpicker --autocopy --format=hex";
+    };
+
   };
 }

@@ -44,6 +44,22 @@
       ];
     }
 
+    # Launcher calculator
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + Space"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(launcherCalc)")
+      ];
+    }
+
+    # Clipboard history
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + H"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(clipHistory)")
+      ];
+    }
+
     # Task manager
     {
       _args = [
@@ -85,7 +101,7 @@
     # Password manager
     {
       _args = [
-        (lib.generators.mkLuaInline ''mod .. " + P"'')
+        (lib.generators.mkLuaInline ''mod .. " + K"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(passwordManager)")
       ];
     }
@@ -131,6 +147,14 @@
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + C"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(calculator)")
+      ];
+    }
+
+    # Color picker
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + P"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(colorPicker)")
       ];
     }
   ];
