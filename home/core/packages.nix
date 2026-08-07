@@ -54,6 +54,7 @@
     nwg-look
 
     # Utilities
+    # grimblast
     gnupg
     runapp
   ];

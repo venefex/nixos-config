@@ -6,7 +6,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + SHIFT + Return"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(terminal)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(terminal)'')
       ];
     }
     {
@@ -18,7 +18,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + Grave"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"kitten quick_access_terminal\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("kitten quick_access_terminal")'')
       ];
     }
 
@@ -26,13 +26,13 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + T"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(textEditor)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(textEditor)'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + SHIFT + T"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(textEditor2)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(textEditor2)'')
       ];
     }
 
@@ -40,7 +40,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + Space"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(launcher)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(launcher)'')
       ];
     }
 
@@ -48,7 +48,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + E"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(fileManager)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(fileManager)'')
       ];
     }
 
@@ -56,13 +56,13 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + B"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(browser)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(browser)'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + SHIFT + B"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(browser2)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(browser2)'')
       ];
     }
 
@@ -70,7 +70,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + P"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(passwordManager)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(passwordManager)'')
       ];
     }
 
@@ -78,7 +78,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + V"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(videoPlayer)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(videoPlayer)'')
       ];
     }
 
@@ -86,7 +86,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + C"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(calculator)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(calculator)'')
       ];
     }
   ];

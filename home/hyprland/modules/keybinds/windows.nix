@@ -2,7 +2,7 @@
 
 {
   wayland.windowManager.hyprland.settings.bind = [
-    # Quit window
+    # Quit window (or hides terminal special workspace)
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + Q"'')
@@ -25,7 +25,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + J"'')
-        (lib.generators.mkLuaInline "hl.dsp.layout(\"togglesplit\")")
+        (lib.generators.mkLuaInline ''hl.dsp.layout("togglesplit")'')
       ];
     }
   ];
