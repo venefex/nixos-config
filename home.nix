@@ -13,11 +13,10 @@ let
     "librewolf.nix"
   ];
 
-  programModules = lib.mapAttrsToList (name: _: programsDir + "/${name}") (
-    lib.filterAttrs (
-      name: type: type == "regular" && lib.hasSuffix ".nix" name && !(lib.elem name excludedPrograms)
-    ) (builtins.readDir programsDir)
-  );
+  programFiles = lib.filterAttrs (
+    name: type: type == "regular" && lib.hasSuffix ".nix" name && !(lib.elem name excludedPrograms)
+  ) (builtins.readDir programsDir);
+  programModules = map (name: programsDir + "/${name}") (builtins.attrNames programFiles);
 in
 {
   imports = [
