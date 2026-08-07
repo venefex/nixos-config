@@ -28,5 +28,31 @@
         (lib.generators.mkLuaInline ''hl.dsp.layout("togglesplit")'')
       ];
     }
+
+    # Focus change
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + left"'')
+        (lib.generators.mkLuaInline ''hl.dsp.focus({ direction = "left" })'')
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + right"'')
+        (lib.generators.mkLuaInline ''hl.dsp.focus({ direction = "right" })'')
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + up"'')
+        (lib.generators.mkLuaInline ''hl.dsp.focus({ direction = "up" })'')
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + down"'')
+        (lib.generators.mkLuaInline ''hl.dsp.focus({ direction = "down" })'')
+      ];
+    }
   ];
 }

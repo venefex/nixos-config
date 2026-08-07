@@ -55,6 +55,7 @@
 
     # Utilities
     # grimblast
+    playerctl
     gnupg
     runapp
   ];
