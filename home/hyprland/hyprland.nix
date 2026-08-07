@@ -5,6 +5,7 @@
 
   imports = [
     ./modules/auto-start.nix
+    ./modules/input.nix
     ./modules/keybinds.nix
     ./modules/monitors.nix
     ./modules/hyprpaper.nix

@@ -231,51 +231,53 @@ hl.config({
 ---- INPUT ----
 ---------------
 
-hl.config({
-  input = {
-    kb_layout    = "us",
-    kb_variant   = "",
-    kb_model     = "",
-    kb_options   = "",
-    kb_rules     = "",
+-- hl.config({
+--   input = {
+--     kb_layout          = "us",
+--     kb_variant         = "",
+--     kb_model           = "",
+--     kb_options         = "fkeys:basic_13-24",
+--     kb_rules           = "",
+--     numlock_by_default = false,
 
-    follow_mouse = 1,
+--     follow_mouse       = 1,
 
-    sensitivity  = 0, -- -1.0 - 1.0, 0 means no modification.
+--     sensitivity        = -0.8,
+--     accel_profile      = "adaptive",
 
-    touchpad     = {
-      natural_scroll = false,
-    },
-  },
-})
+--     touchpad           = {
+--       natural_scroll = false,
+--     },
+--   },
+-- })
 
-hl.gesture({
-  fingers = 3,
-  direction = "horizontal",
-  action = "workspace"
-})
+-- hl.gesture({
+--   fingers = 3,
+--   direction = "horizontal",
+--   action = "workspace"
+-- })
 
--- Example per-device config
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
-hl.device({
-  name        = "endgame-gear-endgame-gear-xm2-8k-v2-gaming-mouse",
-  sensitivity = -0.7,
-})
+-- -- Example per-device config
+-- -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
+-- hl.device({
+--   name        = "endgame-gear-endgame-gear-xm2-8k-v2-gaming-mouse",
+--   sensitivity = -0.7,
+-- })
 
 
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
 
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+-- local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 -- hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 -- local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 -- hl.bind(mainMod .. " + F12",
-  -- hl.dsp.exec_cmd(
-  -- "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exec_cmd(uwsm stop)'"))
+-- hl.dsp.exec_cmd(
+-- "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exec_cmd(uwsm stop)'"))
 -- hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 -- hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 -- hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(browser2))
@@ -309,9 +311,9 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(musicPlayer))
 -- hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 -- hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
--- Move/resize windows with mainMod + LMB/RMB and dragging
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+-- -- Move/resize windows with mainMod + LMB/RMB and dragging
+-- hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+-- hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- -- Laptop multimedia keys for volume and LCD brightness
 -- hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),

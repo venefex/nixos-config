@@ -21,6 +21,14 @@
       ];
     }
 
+    # Kill window
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + Q"'')
+        (lib.generators.mkLuaInline ''hl.dispatch(hl.dsp.window.kill())'')
+      ];
+    }
+
     # Toggle split (dwindle only)
     {
       _args = [
@@ -29,7 +37,23 @@
       ];
     }
 
-    # Focus change
+    # Move/resize window
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + mouse:272"'')
+        (lib.generators.mkLuaInline "hl.dsp.window.drag()")
+        (lib.generators.mkLuaInline "{ mouse = true }")
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + mouse:273"'')
+        (lib.generators.mkLuaInline "hl.dsp.window.resize()")
+        (lib.generators.mkLuaInline "{ mouse = true }")
+      ];
+    }
+
+    # Window focus change
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + left"'')
