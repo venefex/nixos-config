@@ -26,6 +26,7 @@ in
 
     # Services
     ./home/services/backup-cleanup.nix
+    ./home/services/udiskie.nix
 
     # Secrets
     ./home/security/secrets.nix
