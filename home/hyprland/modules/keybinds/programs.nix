@@ -89,22 +89,5 @@
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(calculator)")
       ];
     }
-
-    # Task manager
-    {
-      _args = [
-        (lib.generators.mkLuaInline ''"CTRL + SHIFT + ESCAPE"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(taskManager)")
-      ];
-    }
-
-    # Volume control
-    {
-      _args = [
-        (lib.generators.mkLuaInline ''mod .. " + F10"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(volumeControl)")
-      ];
-    }
-
   ];
 }

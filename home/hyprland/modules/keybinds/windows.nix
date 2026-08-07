@@ -2,6 +2,7 @@
 
 {
   wayland.windowManager.hyprland.settings.bind = [
+    # Quit window
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + Q"'')
@@ -17,6 +18,14 @@
             hl.dispatch(hl.dsp.window.close())
           end
         '')
+      ];
+    }
+
+    # Toggle split (dwindle only)
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + J"'')
+        (lib.generators.mkLuaInline "hl.dsp.layout(\"togglesplit\")")
       ];
     }
   ];
