@@ -6,7 +6,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + SHIFT + Return"'')
-        (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special("terminal")'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(terminal)")
       ];
     }
     {
