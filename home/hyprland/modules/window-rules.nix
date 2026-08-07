@@ -16,7 +16,7 @@
         ];
       }
 
-      # Terminal (floating special workspace)
+      # Music (floating special workspace)
       {
         name = "music-special-workspace";
         match.class = "scratch-music";
@@ -25,6 +25,19 @@
         center = true;
         size = [
           "monitor_w*0.5"
+          "monitor_h*0.8"
+        ];
+      }
+
+      # Messaging (floating special workspace)
+      {
+        name = "messaging-special-workspace";
+        match.class = "scratch-messaging";
+        workspace = "special:messaging";
+        float = true;
+        center = true;
+        size = [
+          "monitor_w*0.8"
           "monitor_h*0.8"
         ];
       }

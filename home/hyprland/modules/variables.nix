@@ -48,6 +48,10 @@
       _var = "runapp mpv --player-operation-mode=pseudo-gui";
     };
 
+    messaging = {
+      _var = "runapp vesktop";
+    };
+
     calculator = {
       _var = "runapp qalculate-gtk";
     };

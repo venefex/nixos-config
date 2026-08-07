@@ -41,6 +41,9 @@
     # Music players
     fooyin
 
+    # Messaging
+    vesktop
+
     # Task managers
     mission-center
 

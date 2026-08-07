@@ -112,6 +112,20 @@
       ];
     }
 
+    # Messaging
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + D"'')
+        (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special("messaging")'')
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + D"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(messaging)")
+      ];
+    }
+
     # Calculator
     {
       _args = [

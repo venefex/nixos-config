@@ -9,12 +9,15 @@
         (lib.generators.mkLuaInline ''
           function()
             local w = hl.get_active_window()
-
-            if w ~= nil and w.class == "scratch-terminal" then
-              hl.dispatch(hl.dsp.workspace.toggle_special("terminal"))
+            local specials = {
+              ["scratch-terminal"]  = "terminal",
+              ["scratch-music"]     = "music",
+              ["scratch-messaging"] = "messaging",
+            }
+            if w ~= nil and specials[w.class] then
+              hl.dispatch(hl.dsp.workspace.toggle_special(specials[w.class]))
               return
             end
-
             hl.dispatch(hl.dsp.window.close())
           end
         '')
@@ -25,7 +28,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + SHIFT + Q"'')
-        (lib.generators.mkLuaInline ''hl.dispatch(hl.dsp.window.kill)'')
+        (lib.generators.mkLuaInline "hl.dispatch(hl.dsp.window.kill)")
       ];
     }
 
@@ -41,15 +44,15 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + mouse:272"'')
-        (lib.generators.mkLuaInline ''hl.dsp.window.drag()'')
-        (lib.generators.mkLuaInline ''{ mouse = true }'')
+        (lib.generators.mkLuaInline "hl.dsp.window.drag()")
+        (lib.generators.mkLuaInline "{ mouse = true }")
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + mouse:273"'')
-        (lib.generators.mkLuaInline ''hl.dsp.window.resize()'')
-        (lib.generators.mkLuaInline ''{ mouse = true }'')
+        (lib.generators.mkLuaInline "hl.dsp.window.resize()")
+        (lib.generators.mkLuaInline "{ mouse = true }")
       ];
     }
 
