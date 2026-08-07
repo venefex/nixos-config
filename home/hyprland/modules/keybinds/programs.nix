@@ -15,6 +15,12 @@
         (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special("terminal")'')
       ];
     }
+        {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + `"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"kitten quick_access_terminal\")")
+      ];
+    }
 
     # Text editors
     {
