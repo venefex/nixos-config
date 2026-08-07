@@ -18,9 +18,9 @@
 
       # Terminal (floating special workspace)
       {
-        name = "music-player-special-workspace";
-        match.class = "scratch-musicPlayer";
-        workspace = "special:musicPlayer";
+        name = "music-special-workspace";
+        match.class = "scratch-music";
+        workspace = "special:music";
         float = true;
         center = true;
         size = [
