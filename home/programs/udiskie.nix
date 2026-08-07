@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  programs.udiskie = {
+    enable = true;
+  };
+}

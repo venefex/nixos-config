@@ -13,6 +13,7 @@
     loader = {
       systemd-boot = {
         enable = true;
+        consoleMode = "max";
         configurationLimit = 5;
         edk2-uefi-shell.enable = true;
         memtest86.enable = true;
