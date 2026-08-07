@@ -25,7 +25,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + SHIFT + Q"'')
-        (lib.generators.mkLuaInline ''hl.dispatch(hl.dsp.window.kill())'')
+        (lib.generators.mkLuaInline ''hl.dispatch(hl.dsp.window.kill)'')
       ];
     }
 
@@ -41,15 +41,15 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + mouse:272"'')
-        (lib.generators.mkLuaInline "hl.dsp.window.drag()")
-        (lib.generators.mkLuaInline "{ mouse = true }")
+        (lib.generators.mkLuaInline ''hl.dsp.window.drag()'')
+        (lib.generators.mkLuaInline ''{ mouse = true }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + mouse:273"'')
-        (lib.generators.mkLuaInline "hl.dsp.window.resize()")
-        (lib.generators.mkLuaInline "{ mouse = true }")
+        (lib.generators.mkLuaInline ''hl.dsp.window.resize()'')
+        (lib.generators.mkLuaInline ''{ mouse = true }'')
       ];
     }
 

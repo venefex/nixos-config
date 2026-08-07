@@ -2,9 +2,10 @@
 
 {
   wayland.windowManager.hyprland.settings = {
-    # Terminal (floating special workspace)
     window_rule = [
+      # Terminal (floating special workspace)
       {
+        name = "terminal-special-workspace";
         match.class = "scratch-terminal";
         workspace = "special:terminal";
         float = true;
@@ -15,8 +16,22 @@
         ];
       }
 
+      # Terminal (floating special workspace)
+      {
+        name = "music-player-special-workspace";
+        match.class = "scratch-musicPlayer";
+        workspace = "special:musicPlayer";
+        float = true;
+        center = true;
+        size = [
+          "monitor_w*0.5"
+          "monitor_h*0.8"
+        ];
+      }
+
       # qalculate-gtk
       {
+        name = "qalculate-floating";
         match.class = "qalculate-gtk";
         float = true;
         center = true;
@@ -24,6 +39,7 @@
 
       # KeePassXC
       {
+        name = "keepassxc-floating";
         match.class = "org.keepassxc.KeePassXC";
         float = true;
         center = true;
@@ -35,6 +51,7 @@
 
       # MissionCenter
       {
+        name = "missioncenter-floating";
         match.class = "io.missioncenter.MissionCenter";
         float = true;
         center = true;
@@ -46,6 +63,7 @@
 
       # mpv
       {
+        name = "mpv-floating";
         match.class = "mpv";
         float = true;
         center = true;
@@ -57,6 +75,7 @@
 
       # pwvucontrol
       {
+        name = "pwvucontrol-floating";
         match.class = "com.saivert.pwvucontrol";
         float = true;
         center = true;
@@ -64,6 +83,29 @@
           "monitor_w*0.5"
           "monitor_h*0.5"
         ];
+      }
+
+      # Ignore maximize requests from all apps
+      {
+        name = "suppress-maximize-events";
+        match.class = ".*";
+        suppress_event = "maximize";
+      }
+
+      # Fix dragging issues with XWayland
+      {
+        name = "fix-xwayland-drags";
+
+        match = {
+          class = "^$";
+          title = "^$";
+          xwayland = true;
+          float = true;
+          fullscreen = false;
+          pin = false;
+        };
+
+        no_focus = true;
       }
     ];
   };

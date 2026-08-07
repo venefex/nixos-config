@@ -90,6 +90,20 @@
       ];
     }
 
+    # Music player
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + M"'')
+        (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special("musicPlayer")'')
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + M"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(musicPlayer)")
+      ];
+    }
+
     # Video player
     {
       _args = [

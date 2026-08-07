@@ -4,9 +4,12 @@
   # Installation is in ./modules/desktop/hyprland.nix
 
   imports = [
+    ./modules/appearance.nix
     ./modules/auto-start.nix
     ./modules/input.nix
     ./modules/keybinds.nix
+    ./modules/layout.nix
+    ./modules/misc.nix
     ./modules/monitors.nix
     ./modules/hyprpaper.nix
     ./modules/variables.nix
@@ -20,7 +23,5 @@
 
     systemd.enable = false;
     systemd.variables = [ "--all" ];
-
-    extraConfig = builtins.readFile ./hyprland.lua;
   };
 }
