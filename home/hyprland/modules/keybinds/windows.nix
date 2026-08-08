@@ -40,6 +40,14 @@
       ];
     }
 
+    # Toggle floating window
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + F"'')
+        (lib.generators.mkLuaInline "hl.dsp.window.togglefloating()")
+      ];
+    }
+
     # Maximize window
     {
       _args = [
