@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.neovim = {
+  programs.nixvim = {
     enable = true;
   };
 }
