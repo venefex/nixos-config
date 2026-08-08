@@ -44,7 +44,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + F"'')
-        (lib.generators.mkLuaInline "hl.dsp.window.togglefloating()")
+        (lib.generators.mkLuaInline "hl.dsp.window.float()")
       ];
     }
 
@@ -59,7 +59,7 @@
     # Fullscreen window
     {
       _args = [
-        (lib.generators.mkLuaInline ''mod .. " + F"'')
+        (lib.generators.mkLuaInline ''mod .. " + Backspace"'')
         (lib.generators.mkLuaInline ''hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" })'')
       ];
     }
