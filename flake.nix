@@ -23,6 +23,9 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+    };
   };
 
   outputs =
@@ -77,6 +80,7 @@
               sharedModules = [
                 inputs.noctalia.homeModules.default
                 inputs.sops-nix.homeManagerModules.sops
+                inputs.nixvim.homeModules.nixvim
               ];
 
               backupCommand = pkgs.writeShellScript "hm-backup" ''
