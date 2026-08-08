@@ -40,6 +40,22 @@
       ];
     }
 
+    # Maximize window
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + M"'')
+        (lib.generators.mkLuaInline ''hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })'')
+      ];
+    }
+
+    # Fullscreen window
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + F"'')
+        (lib.generators.mkLuaInline ''hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" })'')
+      ];
+    }
+
     # Move/resize window
     {
       _args = [

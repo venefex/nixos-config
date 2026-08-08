@@ -109,13 +109,13 @@
     # Music player
     {
       _args = [
-        (lib.generators.mkLuaInline ''mod .. " + M"'')
+        (lib.generators.mkLuaInline ''mod .. " + A"'')
         (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special("music")'')
       ];
     }
     {
       _args = [
-        (lib.generators.mkLuaInline ''mod .. " + SHIFT + M"'')
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + A"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(musicPlayer)")
       ];
     }
