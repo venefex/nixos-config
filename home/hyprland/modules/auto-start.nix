@@ -6,15 +6,15 @@
       "hyprland.start"
       (lib.generators.mkLuaInline ''
         function()
-          hl.exec_cmd("kitty --class scratch-terminal", {
+          hl.exec_cmd("kitty", {
             workspace = "special:terminal silent",
           })
 
-          hl.exec_cmd("fooyin --class scratch-music", {
+          hl.exec_cmd("fooyin", {
             workspace = "special:music silent",
           })
 
-          hl.exec_cmd("vesktop --class scratch-messaging", {
+          hl.exec_cmd("vesktop", {
             workspace = "special:messaging silent",
           })
         end

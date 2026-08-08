@@ -5,7 +5,7 @@
     general.layout = "dwindle";
 
     dwindle = {
-      force_split = 2;
+      force_split = 0;
       preserve_split = true;
     };
 

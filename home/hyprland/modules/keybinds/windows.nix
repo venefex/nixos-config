@@ -10,9 +10,9 @@
           function()
             local w = hl.get_active_window()
             local specials = {
-              ["scratch-terminal"]  = "terminal",
-              ["scratch-music"]     = "music",
-              ["scratch-messaging"] = "messaging",
+              ["kitty"]             = "terminal",
+              ["org.fooyin.fooyin"] = "music",
+              ["vesktop"]           = "messaging",
             }
             if w ~= nil and specials[w.class] then
               hl.dispatch(hl.dsp.workspace.toggle_special(specials[w.class]))

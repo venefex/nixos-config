@@ -110,7 +110,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + M"'')
-        (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special("musicPlayer")'')
+        (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special("music")'')
       ];
     }
     {
