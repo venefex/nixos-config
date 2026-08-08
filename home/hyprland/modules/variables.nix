@@ -29,7 +29,7 @@
     };
 
     clipHistory = {
-      _var = "runapp cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+      _var = "runapp cliphist list | rofi -dmenu -i | cliphist decode | wl-copy";
     };
 
     fileManager = {

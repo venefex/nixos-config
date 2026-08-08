@@ -58,6 +58,7 @@
 
     # Utilities
     # grimblast
+    iwgtk
     hyprpicker
     playerctl
     gnupg
