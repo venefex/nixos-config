@@ -105,5 +105,13 @@
         (lib.generators.mkLuaInline ''hl.dsp.focus({ direction = "down" })'')
       ];
     }
+
+    # Cycle windows
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + Tab"'')
+        (lib.generators.mkLuaInline "hl.dsp.window.cycle_next()")
+      ];
+    }
   ];
 }
