@@ -14,6 +14,7 @@
         "files.insertFinalNewline" = true;
         "files.trimFinalNewlines" = true;
         "files.trimTrailingWhitespace" = true;
+        "security.workspace.trust.enabled" = false;
         "redhat.telemetry.enabled" = false;
       };
 
