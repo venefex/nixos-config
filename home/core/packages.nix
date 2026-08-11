@@ -49,6 +49,7 @@
 
     # Terminals
     kdePackages.konsole
+    kdePackages.yakuake
 
     # Theming
     kdePackages.breeze
