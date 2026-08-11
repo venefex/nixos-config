@@ -28,11 +28,12 @@
       tmpfsSize = "50%";
     };
 
-    # Quiet boot
+    # Quiet boot + amd_pstate
     consoleLogLevel = 3;
     initrd.verbose = false;
     kernelParams = [
       "quiet"
+      "splash"
       "udev.log_level=3"
       "rd.systemd.show_status=false"
     ];
