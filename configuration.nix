@@ -38,7 +38,7 @@
     ./modules/desktop/storage.nix
 
     # Window managers
-    ./modules/wm/hyprland.nix
+    ./modules/window-managers/hyprland.nix
   ];
 
   system = {

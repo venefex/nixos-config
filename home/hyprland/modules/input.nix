@@ -3,7 +3,7 @@
 {
   wayland.windowManager.hyprland.settings.config.input = {
     kb_layout = "us";
-    kb_variant = "";
+    kb_variant = "intl";
     kb_model = "";
     kb_options = "fkeys:basic_13-24";
     kb_rules = "";
