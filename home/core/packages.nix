@@ -48,8 +48,7 @@
     mission-center
 
     # Terminals
-    kdePackages.konsole
-    kdePackages.yakuake
+    foot
 
     # Theming
     kdePackages.breeze
