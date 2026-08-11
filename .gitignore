@@ -24,6 +24,3 @@ keys.txt
 *.tmp
 *.bak
 *~
-
-Hardware-specific settings created during system installation
-**/hardware-configuration.nix
