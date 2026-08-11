@@ -25,5 +25,5 @@ keys.txt
 *.bak
 *~
 
-# Hardware-specific settings created during system installation
-# **/hardware-configuration.nix
+Hardware-specific settings created during system installation
+**/hardware-configuration.nix
