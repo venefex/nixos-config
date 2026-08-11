@@ -4,6 +4,7 @@
   # Installation is in ./modules/desktop/hyprland.nix
 
   imports = [
+    ./modules/animations.nix
     ./modules/appearance.nix
     ./modules/auto-start.nix
     ./modules/input.nix

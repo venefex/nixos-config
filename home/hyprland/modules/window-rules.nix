@@ -10,8 +10,8 @@
       float = true;
       center = true;
       size = [
-        "50%"
-        "80%"
+        "monitor_w*0.5"
+        "monitor_h*0.8"
       ];
     }
 
@@ -23,8 +23,8 @@
       float = true;
       center = true;
       size = [
-        "60%"
-        "80%"
+        "monitor_w*0.6"
+        "monitor_h*0.8"
       ];
     }
 
@@ -43,8 +43,8 @@
       float = true;
       center = true;
       size = [
-        "50%"
-        "80%"
+        "monitor_w*0.5"
+        "monitor_h*0.8"
       ];
     }
 
@@ -55,8 +55,8 @@
       float = true;
       center = true;
       size = [
-        "50%"
-        "50%"
+        "monitor_w*0.5"
+        "monitor_h*0.5"
       ];
     }
 
@@ -67,8 +67,8 @@
       float = true;
       center = true;
       size = [
-        "50%"
-        "50%"
+        "monitor_w*0.5"
+        "monitor_h*0.5"
       ];
     }
 
@@ -78,7 +78,10 @@
       match.class = "com.saivert.pwvucontrol";
       float = true;
       center = true;
-      size = "50% 50%";
+      size = [
+        "monitor_w*0.5"
+        "monitor_h*0.5"
+      ];
     }
 
     # Ignore maximize requests from all apps
