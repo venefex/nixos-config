@@ -5,7 +5,7 @@
     # Terminals
     {
       _args = [
-        (lib.generators.mkLuaInline ''mod .. " + SHIFT + Return"'')
+        (lib.generators.mkLuaInline ''mod .. " + Return"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(terminal)")
       ];
     }
@@ -18,7 +18,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + Grave"'')
-        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("kitten quick_access_terminal")'')
+        (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special("dropdown-top")'')
       ];
     }
 
