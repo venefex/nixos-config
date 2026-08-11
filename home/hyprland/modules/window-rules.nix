@@ -9,7 +9,10 @@
       workspace = "special:music";
       float = true;
       center = true;
-      size = "50% 80%";
+      size = [
+        "50%"
+        "80%"
+      ];
     }
 
     # Messaging (floating special workspace)
@@ -19,18 +22,11 @@
       workspace = "special:messaging";
       float = true;
       center = true;
-      size = "60% 80%";
+      size = [
+        "60%"
+        "80%"
+      ];
     }
-
-    # Floating kitty
-    {
-      name = "kitty-floating";
-      match.class = "kitty";
-      float = true;
-      center = true;
-      size = "50% 50%";
-    }
-
 
     # qalculate-gtk
     {
@@ -46,7 +42,10 @@
       match.class = "org.keepassxc.KeePassXC";
       float = true;
       center = true;
-      size = "50% 80%";
+      size = [
+        "50%"
+        "80%"
+      ];
     }
 
     # MissionCenter
@@ -55,7 +54,10 @@
       match.class = "io.missioncenter.MissionCenter";
       float = true;
       center = true;
-      size = "50% 50%";
+      size = [
+        "50%"
+        "50%"
+      ];
     }
 
     # mpv
@@ -64,7 +66,10 @@
       match.class = "mpv";
       float = true;
       center = true;
-      size = "50% 50%";
+      size = [
+        "50%"
+        "50%"
+      ];
     }
 
     # pwvucontrol
