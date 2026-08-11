@@ -27,7 +27,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "fooyin";
-  version = "0.12.1";
+  version = "0.12.2";
 
   __structuredAttrs = true;
 
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "fooyin";
     repo = "fooyin";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-TdmMnfR4duRDIApOQ5U3H3KwTVnlPKZG0sM3obpSU2w=";
+    hash = "sha256-lShI0sKF9NPS6pmqF4SGqwGxvb3wIKyFEuMrXlqhZxk=";
   };
 
   buildInputs = [
