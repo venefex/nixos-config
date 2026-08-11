@@ -12,6 +12,10 @@
       _var = "runapp kitty";
     };
 
+    terminal2 = {
+      _var = "runapp foot";
+    };
+
     textEditor = {
       _var = "runapp neovim";
     };

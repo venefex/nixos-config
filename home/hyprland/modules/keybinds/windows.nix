@@ -2,25 +2,12 @@
 
 {
   wayland.windowManager.hyprland.settings.bind = [
-    # Quit window (or hides terminal special workspace)
+    # Quit window
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + Q"'')
-        (lib.generators.mkLuaInline ''
-          function()
-            local w = hl.get_active_window()
-            local specials = {
-              ["kitty"]             = "terminal",
-              ["org.fooyin.fooyin"] = "music",
-              ["vesktop"]           = "messaging",
-            }
-            if w ~= nil and specials[w.class] then
-              hl.dispatch(hl.dsp.workspace.toggle_special(specials[w.class]))
-              return
-            end
-            hl.dispatch(hl.dsp.window.close())
-          end
-        '')
+        (lib.generators.mkLuaInline "hl.dispatch(hl.dsp.window.close)")
+
       ];
     }
 
