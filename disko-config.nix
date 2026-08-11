@@ -3,7 +3,7 @@
     disk = {
       main = {
         type = "disk";
-        device = "/dev/nvme2n1"; # Check this and edit accordingly before installing
+        device = "/dev/nvmeXn1"; # Check this and edit accordingly before installing
         content = {
           type = "gpt";
           partitions = {
