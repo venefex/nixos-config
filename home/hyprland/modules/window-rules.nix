@@ -2,18 +2,6 @@
 
 {
   wayland.windowManager.hyprland.settings.window_rule = [
-    # Password manager (floating special workspace)
-    {
-      name = "passwordManager-special-workspace";
-      match.class = "org.keepassxc.KeePassXC";
-      workspace = "special:passwordManager";
-      float = true;
-      center = true;
-      size = [
-        "monitor_w*0.5"
-        "monitor_h*0.8"
-      ];
-    }
     # Music (floating special workspace)
     {
       name = "music-special-workspace";
@@ -36,6 +24,18 @@
       center = true;
       size = [
         "monitor_w*0.6"
+        "monitor_h*0.8"
+      ];
+    }
+
+    # KeePassXC
+    {
+      name = "keepassxc-floating";
+      match.class = "org.keepassxc.KeePassXC";
+      float = true;
+      center = true;
+      size = [
+        "monitor_w*0.5"
         "monitor_h*0.8"
       ];
     }
