@@ -44,6 +44,9 @@
     # Messaging
     vesktop
 
+    # Office suites
+    libreoffice-qt-fresh
+
     # Task managers
     mission-center
 
