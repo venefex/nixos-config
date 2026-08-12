@@ -10,6 +10,7 @@
           function()
             local w = hl.get_active_window()
             local specials = {
+              ["org.keepassxc.KeePassXC"] = "passwordManager",
               ["org.fooyin.fooyin"] = "music",
               ["vesktop"]           = "messaging",
             }

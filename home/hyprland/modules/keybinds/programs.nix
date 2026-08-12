@@ -103,6 +103,12 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + K"'')
+        (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special("passwordManager")'')
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + K"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(passwordManager)")
       ];
     }
