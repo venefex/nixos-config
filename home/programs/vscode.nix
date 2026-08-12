@@ -8,7 +8,7 @@
     profiles.default = {
       userSettings = {
         "window.zoomLevel" = 0.5;
-        "editor.fontFamily" = "'JetBrains Mono', 'monospace', monospace";
+        "editor.fontFamily" = "'MonaspiceNe NF', 'JetBrainsMono NF', 'monospace', monospace";
         "editor.fontSize" = 14;
         "workbench.iconTheme" = "vscode-icons";
         "files.insertFinalNewline" = true;
