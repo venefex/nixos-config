@@ -7,8 +7,8 @@ in
 {
   wayland.windowManager.hyprland.settings.config = {
     general = {
-      gaps_in = 4;
-      gaps_out = 12;
+      gaps_in = 5;
+      gaps_out = 10;
       border_size = 2;
       col = {
         active_border = {
@@ -26,7 +26,7 @@ in
     };
 
     decoration = {
-      rounding = 10;
+      rounding = 0;
       rounding_power = 2;
       active_opacity = 1.0;
       inactive_opacity = 1.0;

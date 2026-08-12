@@ -151,11 +151,17 @@
       ];
     }
 
-    # Color picker
+    # Color pickers
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + P"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(colorPicker)")
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + P"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(colorPicker2)")
       ];
     }
   ];

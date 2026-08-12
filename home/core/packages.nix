@@ -8,6 +8,10 @@
     # Browsers
     brave
 
+    # Color pickers
+    hyprpicker
+    kdePackages.kcolorchooser
+
     # Diff / compare tools
     kdePackages.kompare
 
@@ -61,7 +65,6 @@
 
     # Utilities
     # grimblast
-    hyprpicker
     playerctl
     gnupg
     runapp

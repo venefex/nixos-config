@@ -84,5 +84,9 @@
       _var = "runapp hyprpicker --autocopy --format=hex";
     };
 
+    colorPicker2 = {
+      _var = "runapp kcolorchooser";
+    };
+
   };
 }
