@@ -1,7 +1,23 @@
 { lib, ... }:
 
 let
-  activeBorder = "rgba(238,238,238,1)";
+  ### Default ###
+  # activeBorder = {
+  #   colors = [
+  #     "rgba(51,204,255,0.93)"
+  #     "rgba(0,255,153,0.93)"
+  #   ];
+  #   angle = 45;
+  # };
+  # inactiveBorder = "rgba(33,33,33,0.6)";
+
+  ### White ###
+  activeBorder = {
+    colors = [
+      "rgba(238,238,238,1)"
+    ];
+    angle = 45;
+  };
   inactiveBorder = "rgba(33,33,33,0.6)";
 in
 {
@@ -11,12 +27,7 @@ in
       gaps_out = 10;
       border_size = 2;
       col = {
-        active_border = {
-          colors = [
-            activeBorder
-          ];
-          angle = 45;
-        };
+        active_border = activeBorder;
         inactive_border = inactiveBorder;
       };
 
@@ -30,6 +41,7 @@ in
       rounding_power = 2;
       active_opacity = 1.0;
       inactive_opacity = 1.0;
+      dim_special = 0.4;
       shadow = {
         enabled = true;
         range = 4;

@@ -2,7 +2,6 @@
 
 {
   imports = [
-
     # Hardware scan results
     ./hardware-configuration.nix
 

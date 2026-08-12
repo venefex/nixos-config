@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ lib, ... }:
 
 let
   programsDir = ./home/programs;
@@ -49,7 +44,7 @@ in
     ./home/core/packages.nix
   ];
 
-  # Let Home Manager install and manage itself.
+  # Let Home Manager install and manage itself when in standalone mode.
   programs.home-manager.enable = true;
 
   # Leave this unchanged for existing Home Manager installations.
