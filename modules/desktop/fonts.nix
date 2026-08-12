@@ -2,17 +2,33 @@
 
 {
   fonts = {
+    enableDefaultPackages = true;
+
     packages = with pkgs; [
+     # Base / Unicode coverage
       noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-color-emoji
-      fira-code
-      fira-code-symbols
-      jetbrains-mono
+
+      # Programming / monospace
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.iosevka
+      nerd-fonts.monaspace
+      nerd-fonts.sauce-code-pro
       hack-font
       cascadia-code
-      monaspace
       terminus_font
+
+      # UI / sans-serif
+      inter
+      open-sans
+      ibm-plex
+
+      # Icons
+      font-awesome
+
+      # Microsoft-compatible / metric substitutes
+      carlito
+      corefonts
+      vista-fonts
     ];
 
     fontconfig.defaultFonts = {
