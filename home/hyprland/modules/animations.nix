@@ -28,6 +28,24 @@
       }
       {
         _args = [
+          "easeOutCubic"
+          {
+            type = "bezier";
+            points = [
+              [
+                0.22
+                0.61
+              ]
+              [
+                0.36
+                1
+              ]
+            ];
+          }
+        ];
+      }
+      {
+        _args = [
           "easeInOutCubic"
           {
             type = "bezier";
@@ -106,24 +124,6 @@
             mass = 1;
             stiffness = 71.2633;
             dampening = 15.8273644;
-          }
-        ];
-      }
-      {
-        _args = [
-          "slide"
-          {
-            type = "bezier";
-            points = [
-              [
-                0.22
-                0.61
-              ]
-              [
-                0.36
-                1
-              ]
-            ];
           }
         ];
       }
@@ -215,23 +215,30 @@
       {
         leaf = "workspaces";
         enabled = true;
-        speed = 1.94;
-        bezier = "almostLinear";
-        style = "slide";
+        speed = 4.5;
+        bezier = "easeOutCubic";
+        style = "slideFade";
       }
       {
-        leaf = "workspacesIn";
+        leaf = "specialWorkspace";
         enabled = true;
-        speed = 1.21;
-        bezier = "almostLinear";
-        style = "fade";
+        speed = 3;
+        bezier = "easeOutCubic";
+        style = "slidefadevert";
       }
       {
-        leaf = "workspacesOut";
+        leaf = "specialWorkspaceIn";
         enabled = true;
-        speed = 1.94;
-        bezier = "almostLinear";
-        style = "fade";
+        speed = 3;
+        bezier = "easeOutCubic";
+        style = "slidefadevert";
+      }
+      {
+        leaf = "specialWorkspaceOut";
+        enabled = true;
+        speed = 4;
+        bezier = "easeInOutCubic";
+        style = "slidefadevert";
       }
       {
         leaf = "zoomFactor";
