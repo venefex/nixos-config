@@ -114,12 +114,14 @@
             nixpkgs.config.allowUnfreePredicate =
               pkg:
               builtins.elem (nixpkgs.lib.getName pkg) [
-                "steam"
+                "corefonts"
                 "discord"
                 "jetbrains.rider"
                 "jetbrains.clion"
                 "libvgm"
+                "steam"
                 "unrar"
+                "vista-fonts"
                 "vscode"
                 "xnviewmp"
               ];
