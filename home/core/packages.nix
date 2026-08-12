@@ -49,8 +49,6 @@
 
     # Terminals
     foot
-    kdePackages.konsole
-    kdePackages.yakuake
 
     # Theming
     kdePackages.breeze

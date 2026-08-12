@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   # Installation is in ./modules/desktop/hyprland.nix

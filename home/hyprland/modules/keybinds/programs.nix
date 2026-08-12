@@ -11,6 +11,12 @@
     }
     {
       _args = [
+        (lib.generators.mkLuaInline ''mod .. " + Grave"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(dropdownTerminal)")
+      ];
+    }
+    {
+      _args = [
         (lib.generators.mkLuaInline ''mod .. " + SHIFT + Return"'')
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(terminal2)")
 

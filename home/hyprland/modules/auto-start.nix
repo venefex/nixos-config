@@ -6,7 +6,7 @@
       "hyprland.start"
       (lib.generators.mkLuaInline ''
         function()
-          hl.exec_cmd("runapp yakuake")
+          hl.exec_cmd("runapp kitten quick-access-terminal")
 
           hl.exec_cmd("fooyin", {
             workspace = "special:music silent",

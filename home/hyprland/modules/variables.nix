@@ -12,6 +12,10 @@
       _var = "runapp kitty";
     };
 
+    dropdownTerminal = {
+      _var = "kitten quick-access-terminal";
+    };
+
     terminal2 = {
       _var = "runapp foot";
     };
