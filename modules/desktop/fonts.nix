@@ -13,8 +13,8 @@
       nerd-fonts.iosevka
       nerd-fonts.monaspace
       nerd-fonts.sauce-code-pro
-      hack-font
-      cascadia-code
+      nerd-fonts.caskaydia-cove
+      nerd-fonts.hack
       terminus_font
 
       # UI / sans-serif
