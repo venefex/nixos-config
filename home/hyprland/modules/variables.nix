@@ -41,7 +41,7 @@
     };
 
     clipHistoryClear = {
-      _var = "runapp cliphist wipe";
+      _var = "cliphist wipe";
     };
 
     fileManager = {
