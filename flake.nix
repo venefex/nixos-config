@@ -61,7 +61,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           { nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ]; }
-          ./configuration.nix
+          ./default.nix
 
           # Auto-collected overlays
           { nixpkgs.overlays = overlays; }
