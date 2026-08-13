@@ -151,6 +151,14 @@
       ];
     }
 
+    # Screenshot
+    {
+      _args = [
+        (lib.generators.mkLuaInline "Print")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')'')
+      ];
+    }
+
     # Color pickers
     {
       _args = [
