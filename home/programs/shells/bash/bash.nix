@@ -12,9 +12,9 @@
   };
 
   imports = [
-    ./aliases.nix
-    ./bashrc-extra.nix
-    ./history.nix
-    ./init-extra.nix
+    ./config/aliases.nix
+    ./config/bashrc-extra.nix
+    ./config/history.nix
+    ./config/init-extra.nix
   ];
 }
