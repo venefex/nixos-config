@@ -5,10 +5,11 @@
     enable = true;
     settings = {
       main = {
-        font = "MonaspiceNe NF:size=11";
+        font = "MonaspiceNe NF:size=10";
         dpi-aware = "yes";
         pad = "8x8";
         term = "xterm-256color";
+        initial-color-theme = "dark";
       };
 
       cursor = {
@@ -20,9 +21,8 @@
         hide-when-typing = "yes";
       };
 
-      colors = {
-        alpha = 1;
-        # Default dark theme (can be overridden)
+      colors-dark = {
+        alpha = 0.95;
         foreground = "d8dee9";
         background = "2e3440";
         regular0 = "3b4252"; # black
