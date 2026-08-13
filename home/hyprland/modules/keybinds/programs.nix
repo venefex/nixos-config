@@ -60,6 +60,13 @@
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(clipHistory)")
       ];
     }
+    # Clipboard history clear
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + H"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(clipHistoryClear)")
+      ];
+    }
 
     # Task manager
     {
@@ -154,8 +161,8 @@
     # Screenshot
     {
       _args = [
-        (lib.generators.mkLuaInline "Print")
-        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')'')
+        "Print"
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "$HOME/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')'')
       ];
     }
 

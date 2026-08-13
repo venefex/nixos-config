@@ -9,5 +9,6 @@
     ./rofi.nix
     ./satty.nix
     ./vesktop.nix
+    ./wl-clipboard.nix
   ];
 }

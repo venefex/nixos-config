@@ -13,7 +13,7 @@
     };
 
     dropdownTerminal = {
-      _var = "kitten quick-access-terminal";
+      _var = "runapp kitten quick-access-terminal";
     };
 
     terminal2 = {
@@ -37,7 +37,11 @@
     };
 
     clipHistory = {
-      _var = "runapp cliphist list | rofi -dmenu -i | cliphist decode | wl-copy";
+      _var = "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy";
+    };
+
+    clipHistoryClear = {
+      _var = "runapp cliphist wipe";
     };
 
     fileManager = {

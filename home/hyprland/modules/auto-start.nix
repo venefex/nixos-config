@@ -6,16 +6,13 @@
       "hyprland.start"
       (lib.generators.mkLuaInline ''
         function()
-          hl.exec_cmd("wl-paste --type text --watch cliphist store")
-          hl.exec_cmd("wl-paste --type image --watch cliphist store")
+          hl.exec_cmd("uwsm app -- wl-paste --watch cliphist store")
 
-          hl.exec_cmd("runapp kitten quick-access-terminal")
-
-          hl.exec_cmd("fooyin", {
+          hl.exec_cmd("uwsm app -- kitten quick-access-terminal")
+          hl.exec_cmd("uwsm app -- fooyin", {
             workspace = "special:music silent",
           })
-
-          hl.exec_cmd("vesktop", {
+          hl.exec_cmd("uwsm app -- vesktop", {
             workspace = "special:messaging silent",
           })
         end
