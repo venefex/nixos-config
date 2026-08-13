@@ -7,7 +7,7 @@
     themeFile = "VSCode_Dark";
 
     font = {
-      name = "Monaspace Neon";
+      name = "MonaspiceNe NF";
       size = 11;
     };
 

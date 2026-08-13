@@ -1,18 +1,5 @@
-{ lib, ... }:
+{ ... }:
 
-let
-  programsDir = ./home/programs;
-
-  # Basenames to skip (with or without the .nix suffix)
-  excludedPrograms = [
-    "librewolf.nix"
-  ];
-
-  programFiles = lib.filterAttrs (
-    name: type: type == "regular" && lib.hasSuffix ".nix" name && !(lib.elem name excludedPrograms)
-  ) (builtins.readDir programsDir);
-  programModules = map (name: programsDir + "/${name}") (builtins.attrNames programFiles);
-in
 {
   imports = [
     # Core
@@ -27,6 +14,9 @@ in
     # Secrets
     ./home/security/secrets.nix
 
+    # Programs
+    ./programs/default.nix
+
     # Desktop
     ./home/desktop/qt.nix
     ./home/desktop/cursor.nix
@@ -37,11 +27,6 @@ in
 
     # Noctalia
     ./home/desktop/noctalia.nix
-
-  ] # Programs (auto-imported, minus exclusions)
-  ++ programModules
-  ++ [
-    ./home/core/packages.nix
   ];
 
   # Let Home Manager install and manage itself when in standalone mode.

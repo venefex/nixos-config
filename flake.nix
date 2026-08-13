@@ -74,7 +74,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = { inherit inputs; };
-              users.alex = import ./home.nix;
+              users.alex = import ./home/default.nix;
               backupFileExtension = null;
 
               sharedModules = [

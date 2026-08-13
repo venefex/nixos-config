@@ -18,6 +18,6 @@
     fi
 
     # Import ps1 prompt
-    source ${./prompt.sh}
+    source ${./scripts/prompt.sh}
   '';
 }
