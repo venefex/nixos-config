@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  programs.grim = {
+    enable = true;
+  };
+}

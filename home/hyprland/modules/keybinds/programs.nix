@@ -162,7 +162,7 @@
     {
       _args = [
         "Print"
-        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "$HOME/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')'')
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd('satty -f - --copy-command wl-copy -o "$HOME/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')'')
       ];
     }
 
