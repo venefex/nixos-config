@@ -21,7 +21,7 @@
     };
 
     textEditor = {
-      _var = "runapp neovim";
+      _var = "runapp nvim";
     };
 
     textEditor2 = {

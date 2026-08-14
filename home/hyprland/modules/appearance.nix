@@ -22,19 +22,18 @@ let
   ### White ###
   activeBorder = {
     colors = [
-      "#cba6f7ee"
-      "#f5c2e7ee"
+      "#dce1e8"
     ];
     angle = 45;
   };
-  inactiveBorder = "rgba(33,33,33,0.6)";
+  inactiveBorder = "#2b3038ff";
 in
 {
   wayland.windowManager.hyprland.settings.config = {
     general = {
       gaps_in = 5;
-      gaps_out = 10;
-      border_size = 3;
+      gaps_out = 20;
+      border_size = 2;
       col = {
         active_border = activeBorder;
         inactive_border = inactiveBorder;

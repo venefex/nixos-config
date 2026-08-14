@@ -8,6 +8,7 @@
     ./micro.nix
     ./playerctl.nix
     ./runapp.nix
+    ./satty.nix
     ./tealdeer.nix
     ./yt-dlp.nix
   ];
