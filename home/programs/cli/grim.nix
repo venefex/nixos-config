@@ -1,7 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-  programs.grim = {
-    enable = true;
-  };
+
+  home.packages = with pkgs; [
+    grim
+  ];
 }
