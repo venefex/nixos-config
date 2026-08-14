@@ -1,5 +1,6 @@
 {
   imports = [
+    ./gtk.nix
     ./hyprpicker.nix
     ./kde.nix
     ./mission-center.nix

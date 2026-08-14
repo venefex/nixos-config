@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    libreoffice-qt-fresh
+    libreoffice-fresh
+    colloid-gtk-theme
   ];
 }
