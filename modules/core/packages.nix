@@ -36,6 +36,7 @@
     usbutils
 
     # Text editors
+    nano
     vim
 
     # CLI utilities

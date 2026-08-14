@@ -40,6 +40,7 @@
       home-manager,
       sops-nix,
       nur,
+      qtengine,
       ...
     }@inputs:
     let

@@ -34,6 +34,7 @@
     # Desktop
     ./modules/desktop/fonts.nix
     ./modules/desktop/greetd.nix
+    ./modules/desktop/qt.nix
     ./modules/desktop/storage.nix
 
     # Window managers
