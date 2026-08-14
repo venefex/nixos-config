@@ -15,10 +15,6 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     qtengine = {
       url = "github:kossLAN/qtengine";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,8 +35,6 @@
       disko,
       home-manager,
       sops-nix,
-      nur,
-      qtengine,
       ...
     }@inputs:
     let
@@ -97,23 +91,6 @@
           })
 
           sops-nix.nixosModules.sops
-
-          nur.modules.nixos.default
-
-          # replace qt6ct with the patched version in nur
-          ({ ... }: {
-            nixpkgs.overlays = [
-              (final: prev: {
-                qt6ct = final.nur.repos.ilya-fedin.qt6ct;
-                qt6Packages = prev.qt6Packages.overrideScope (
-                  qfinal: qprev: {
-                    qt6ct = final.nur.repos.ilya-fedin.qt6ct;
-                  }
-                );
-              })
-            ];
-          })
-
           # === Unfree packages configuration ===
           {
             nixpkgs.config.allowUnfreePredicate =

@@ -18,7 +18,6 @@
     ./programs/default.nix
 
     # Desktop
-    ./desktop/qt.nix
     ./desktop/cursor.nix
     ./desktop/xdg.nix
 

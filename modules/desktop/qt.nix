@@ -1,13 +1,7 @@
-{ inputs, lib, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
-  # environment.variables = {
-  #   # QT_QPA_PLATFORMTHEME = lib.mkForce "qtengine";
-
-  #   # default is kvantum, we shouldn't set it
-  #   # QT_STYLE_OVERRIDE = lib.mkForce null;
-  # };
-  imports = [inputs.qtengine.nixosModules.default];
+  imports = [ inputs.qtengine.nixosModules.default ];
 
   programs.qtengine = {
     enable = true;
