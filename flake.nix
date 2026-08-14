@@ -85,7 +85,6 @@
               sharedModules = [
                 inputs.noctalia.homeModules.default
                 inputs.sops-nix.homeManagerModules.sops
-                inputs.qtengine.nixosModules.default
                 inputs.nixvim.homeModules.nixvim
               ];
 
