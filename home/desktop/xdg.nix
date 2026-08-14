@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   nix.assumeXdg = true;
@@ -19,8 +19,9 @@
   xdg.configFile."menus/applications.menu".source =
   "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
-  # Create 'Programming' directory if not present
+  # Create specified directories if not present
   home.activation.createProgrammingDir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    mkdir -p "$HOME/Programming"
+    mkdir -p "${config.home.homeDirectory}/Programming"
+    mkdir -p "${config.home.homeDirectory}/Pictures/Screenshots"
   '';
 }

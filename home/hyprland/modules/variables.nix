@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   wayland.windowManager.hyprland.settings = {
@@ -42,6 +42,14 @@
 
     clipHistoryClear = {
       _var = "cliphist wipe";
+    };
+
+    screenShot = {
+      _var = ''grim "${config.home.homeDirectory}/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png"'';
+    };
+
+    screenShotEdit = {
+      _var = "grim - | satty -f -";
     };
 
     fileManager = {

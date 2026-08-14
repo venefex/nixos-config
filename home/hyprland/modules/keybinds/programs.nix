@@ -158,11 +158,19 @@
       ];
     }
 
-    # Screenshot
+    # Screenshot (automatic)
     {
       _args = [
         "Print"
-        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd('satty -f - --copy-command wl-copy -o "$HOME/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(screenShot)")
+      ];
+    }
+
+    # Screenshot (utility)
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + Print"'')
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(screenShotEdit)")
       ];
     }
 
