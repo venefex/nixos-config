@@ -29,8 +29,5 @@
     kdePackages.ark
     kdePackages.kompare
     kdePackages.filelight
-
-    # Diff / compare tools
-    kdePackages.kompare
   ];
 }
