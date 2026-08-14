@@ -19,6 +19,10 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    qtengine = {
+      url = "github:kossLAN/qtengine";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -80,6 +84,7 @@
               sharedModules = [
                 inputs.noctalia.homeModules.default
                 inputs.sops-nix.homeManagerModules.sops
+                inputs.qtengine.nixosModules.default
                 inputs.nixvim.homeModules.nixvim
               ];
 

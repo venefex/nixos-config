@@ -1,14 +1,18 @@
-{ pkgs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  home = {
-    sessionVariables = {
-      # default is qt5ct, breaks apps
-      QT_QPA_PLATFORMTHEME = lib.mkForce "qtengine";
+  imports = [ inputs.qtengine.nixosModules.default ];
 
-      # default is kvantum, we shouldn't set it
-      QT_STYLE_OVERRIDE = lib.mkForce null;
-    };
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = lib.mkForce "qtengine";
+
+    # default is kvantum, we shouldn't set it
+    QT_STYLE_OVERRIDE = lib.mkForce null;
   };
 
   programs.qtengine = {
