@@ -8,6 +8,7 @@
     pulse.enable = true;
     wireplumber.enable = true;
     jack.enable = true;
+
     extraConfig.pipewire = {
       "99-clock-rate" = {
         "context.properties" = {
@@ -23,9 +24,26 @@
         };
       };
     };
+
+    wireplumber.extraConfig = {
+      "99-alsa-soft-mixer" = {
+        "monitor.alsa.rules" = [
+          {
+            matches = [
+              {
+                "device.name" = "~alsa_card.*";
+              }
+            ];
+            actions = {
+              update-props = {
+                "api.alsa.soft-mixer" = true;
+              };
+            };
+          }
+        ];
+      };
+    };
   };
 
-  security = {
-    rtkit.enable = true;
-  };
+  security.rtkit.enable = true;
 }

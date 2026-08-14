@@ -12,9 +12,18 @@ let
   # inactiveBorder = "rgba(33,33,33,0.6)";
 
   ### White ###
+  # activeBorder = {
+  #   colors = [
+  #     "rgba(238,238,238,1)"
+  #   ];
+  #   angle = 45;
+  # };
+  # inactiveBorder = "rgba(33,33,33,0.6)";
+  ### White ###
   activeBorder = {
     colors = [
-      "rgba(238,238,238,1)"
+      "#7aa2f7ff"
+      "#bb9af7ff"
     ];
     angle = 45;
   };

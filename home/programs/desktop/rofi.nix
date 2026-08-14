@@ -9,6 +9,10 @@ in
 
     plugins = [ pkgs.rofi-calc ];
 
+    extraConfig = {
+      disable-history = true;
+    };
+
     theme = {
       "*" = {
         # Colours (descriptive names reflecting hex values and properties)
