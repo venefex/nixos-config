@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 {
   wayland.windowManager.hyprland.settings = {
@@ -25,7 +25,7 @@
     };
 
     textEditor = {
-      _var = "runapp nvim";
+      _var = lib.generators.mkLuaInline ''terminal .. " nvim"'';
     };
 
     textEditor2 = {

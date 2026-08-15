@@ -25,6 +25,8 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim";
+      # Nixvim is tested against its own Nixpkgs revision.
+      # It is recommend not overriding its nixpkgs input with follows.
     };
   };
 
