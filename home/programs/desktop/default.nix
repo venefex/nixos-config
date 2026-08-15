@@ -1,14 +1,12 @@
+{ lib, ... }:
+
 {
-  imports = [
-    ./gtk.nix
-    ./hyprpicker.nix
-    ./kde.nix
-    ./mission-center.nix
-    ./nwg-look.nix
-    ./pwvucontrol.nix
-    ./qalculate.nix
-    ./rofi.nix
-    ./vesktop.nix
-    ./wl-clipboard.nix
-  ];
+  imports =
+    let
+      entries = builtins.readDir ./.;
+      nixFiles = lib.filterAttrs (
+        name: type: type == "regular" && lib.hasSuffix ".nix" name && name != "default.nix"
+      ) entries;
+    in
+    lib.mapAttrsToList (name: _: ./. + "/${name}") nixFiles;
 }

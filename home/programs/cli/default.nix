@@ -1,16 +1,12 @@
+{ lib, ... }:
+
 {
-  imports = [
-    ./bat.nix
-    ./btop.nix
-    ./gnupg.nix
-    ./grim.nix
-    ./lesspipe.nix
-    ./liquidctl.nix
-    ./micro.nix
-    ./playerctl.nix
-    ./runapp.nix
-    ./satty.nix
-    ./tealdeer.nix
-    ./yt-dlp.nix
-  ];
+  imports =
+    let
+      entries = builtins.readDir ./.;
+      nixFiles = lib.filterAttrs (
+        name: type: type == "regular" && lib.hasSuffix ".nix" name && name != "default.nix"
+      ) entries;
+    in
+    lib.mapAttrsToList (name: _: ./. + "/${name}") nixFiles;
 }
