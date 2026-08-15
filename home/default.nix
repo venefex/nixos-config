@@ -9,6 +9,7 @@
     # Services
     ./services/backup-cleanup.nix
     ./services/cliphist.nix
+    ./services/mpd.nix
     ./services/udiskie.nix
 
     # Secrets
