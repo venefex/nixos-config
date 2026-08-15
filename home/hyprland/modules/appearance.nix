@@ -57,10 +57,11 @@ in
         color = "0xee1a1a1a"; # or 4008636146 if a numeric form is required
       };
       blur = {
-        enabled = false;
-        size = 3;
-        passes = 1;
-        vibrancy = 0.1696;
+        enabled = true;
+        size = 6;
+        passes = 2;
+        vibrancy = 0.15;
+        new_optimizations = true;
       };
     };
   };

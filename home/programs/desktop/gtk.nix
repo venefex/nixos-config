@@ -93,26 +93,31 @@
 #   };
 # }
 
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   gtk = {
     enable = true;
 
     theme = {
-      name    = "Breeze-Dark";
-      package = null;   # already installed on the system
+      name = "Breeze-Dark";
+      package = null; # already installed on the system
     };
 
     iconTheme = {
-      name    = "breeze-dark";
-      package = null;   # already installed on the system
+      name = "breeze-dark";
+      package = null; # already installed on the system
     };
 
     cursorTheme = {
-      name    = "phinger-cursors-light";
-      package = null;   # already installed on the system
-      size    = 24;
+      name = "phinger-cursors-light";
+      package = null; # already installed on the system
+      size = 24;
     };
 
     font = {
@@ -124,22 +129,22 @@
 
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;
-      gtk-button-images                 = true;
-      gtk-menu-images                   = true;
-      gtk-toolbar-style                 = "GTK_TOOLBAR_BOTH_HORIZ";
-      gtk-toolbar-icon-size             = "GTK_ICON_SIZE_LARGE_TOOLBAR";
-      gtk-enable-event-sounds           = false;
-      gtk-enable-input-feedback-sounds  = false;
-      gtk-xft-antialias                 = 1;
-      gtk-xft-hinting                   = 1;
-      gtk-xft-hintstyle                 = "hintslight";
-      gtk-xft-rgba                      = "rgb";
+      gtk-button-images = true;
+      gtk-menu-images = true;
+      gtk-toolbar-style = "GTK_TOOLBAR_BOTH_HORIZ";
+      gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";
+      gtk-enable-event-sounds = false;
+      gtk-enable-input-feedback-sounds = false;
+      gtk-xft-antialias = 1;
+      gtk-xft-hinting = 1;
+      gtk-xft-hintstyle = "hintslight";
+      gtk-xft-rgba = "rgb";
     };
 
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = true;
-      gtk-button-images                 = true;
-      gtk-menu-images                   = true;
+      gtk-button-images = true;
+      gtk-menu-images = true;
     };
   };
 
@@ -149,11 +154,11 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      gtk-theme    = "Breeze-Dark";
-      icon-theme   = "breeze-dark";
+      gtk-theme = "Breeze-Dark";
+      icon-theme = "breeze-dark";
       cursor-theme = "phinger-cursors-light";
       color-scheme = "prefer-dark";
-      font-name    = "Noto Sans 11";
+      font-name = "Noto Sans 11";
     };
   };
 }
