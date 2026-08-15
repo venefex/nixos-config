@@ -96,6 +96,18 @@
       ];
     }
 
+    # keditfiletype
+    {
+      name = "keditfiletype-floating";
+      match.class = "org.kde.keditfiletype";
+      float = true;
+      center = true;
+      size = [
+        "monitor_w*0.25"
+        "monitor_h*0.5"
+      ];
+    }
+
     # Ignore maximize requests from all apps
     {
       name = "suppress-maximize-events";

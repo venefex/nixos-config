@@ -9,6 +9,7 @@
     kdePackages.kdegraphics-thumbnailers
     kdePackages.kio-admin
     kdePackages.kservice
+    kdePackages.kde-cli-tools
 
     # Image format support
     icoutils
