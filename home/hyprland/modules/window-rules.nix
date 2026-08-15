@@ -2,6 +2,18 @@
 
 {
   wayland.windowManager.hyprland.settings.window_rule = [
+    # Terminal (floating)
+    {
+      name = "terminal-floating";
+      match.class = "terminal-floating";
+      float = true;
+      center = true;
+      size = [
+        "monitor_w*0.5"
+        "monitor_h*0.5"
+      ];
+    }
+
     # Music (floating special workspace)
     {
       name = "music-special-workspace";

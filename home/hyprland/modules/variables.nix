@@ -12,11 +12,15 @@
       _var = "runapp kitty";
     };
 
+    floatingTerminal = {
+      _var = "runapp kitty --class terminal-floating";
+    };
+
     dropdownTerminal = {
       _var = "runapp kitten quick-access-terminal";
     };
 
-    terminal2 = {
+    backupTerminal = {
       _var = "runapp foot";
     };
 
