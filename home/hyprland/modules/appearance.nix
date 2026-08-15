@@ -32,7 +32,7 @@ in
   wayland.windowManager.hyprland.settings.config = {
     general = {
       gaps_in = 5;
-      gaps_out = 20;
+      gaps_out = 10;
       border_size = 2;
       col = {
         active_border = activeBorder;
@@ -57,7 +57,7 @@ in
         color = "0xee1a1a1a"; # or 4008636146 if a numeric form is required
       };
       blur = {
-        enabled = true;
+        enabled = false;
         size = 6;
         passes = 2;
         vibrancy = 0.15;
