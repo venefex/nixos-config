@@ -18,6 +18,15 @@ let
     liquidctl --match kraken set fan speed \
       20 40  35 45  40 55  45 70  50 85  55 95  60 100
   '';
+
+  aio-max = pkgs.writeShellScriptBin "aio-max" ''
+    #!/usr/bin/env bash
+    liquidctl --match kraken set pump speed \
+      20 100
+
+    liquidctl --match kraken set fan speed \
+      20 100
+  '';
 in
 {
   wayland.windowManager.hyprland.settings.bind = [
@@ -44,6 +53,12 @@ in
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + PAGE_UP"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("${aio-performance}/bin/aio-performance")'')
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''mod .. " + SHIFT + PAGE_UP"'')
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("${aio-max}/bin/aio-max")'')
       ];
     }
 
