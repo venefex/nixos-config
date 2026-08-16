@@ -103,6 +103,5 @@
     colorPicker2 = {
       _var = "runapp kcolorchooser";
     };
-
   };
 }
