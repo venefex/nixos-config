@@ -7,6 +7,7 @@
     ./core/variables.nix
 
     # Services
+    ./services/aio.nix
     ./services/backup-cleanup.nix
     ./services/cliphist.nix
     ./services/mpd.nix

@@ -22,7 +22,7 @@ in
       Type = "oneshot";
       ExecStart = [
         "${pkgs.liquidctl}/bin/liquidctl initialize all"
-        "${aio-performance}/bin/aio-balanced"
+        "${aio-balanced}/bin/aio-balanced"
       ];
       RemainAfterExit = true;
     };
