@@ -12,7 +12,7 @@
           hl.exec_cmd("uwsm app -- fooyin", {
             workspace = "special:music silent",
           })
-          hl.exec_cmd("vesktop", {
+          hl.exec_cmd("uwsm app -- vesktop", {
             workspace = "special:messaging silent",
           })
         end
