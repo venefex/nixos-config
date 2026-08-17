@@ -19,10 +19,10 @@
       url = "github:kossLAN/qtengine";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # noctalia = {
+    #   url = "github:noctalia-dev/noctalia";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     nixvim = {
       url = "github:nix-community/nixvim";
       # Nixvim is tested against its own Nixpkgs revision.
@@ -79,7 +79,7 @@
               backupFileExtension = null;
 
               sharedModules = [
-                inputs.noctalia.homeModules.default
+                # inputs.noctalia.homeModules.default
                 inputs.sops-nix.homeManagerModules.sops
                 inputs.nixvim.homeModules.nixvim
               ];

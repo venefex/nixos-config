@@ -27,7 +27,7 @@
     ./hyprland/hyprland.nix
 
     # Noctalia
-    ./desktop/noctalia.nix
+    # ./desktop/noctalia.nix
   ];
 
   # Let Home Manager install and manage itself when in standalone mode.

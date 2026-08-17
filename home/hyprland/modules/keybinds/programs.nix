@@ -49,21 +49,21 @@
       ];
     }
 
+    # Currently using noctalia.nix
     # Launcher
-    {
-      _args = [
-        (lib.generators.mkLuaInline ''mod .. " + Space"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(launcher)")
-      ];
-    }
-
+    # {
+    #   _args = [
+    #     (lib.generators.mkLuaInline ''mod .. " + Space"'')
+    #     (lib.generators.mkLuaInline "hl.dsp.exec_cmd(launcher)")
+    #   ];
+    # }
     # Launcher calculator
-    {
-      _args = [
-        (lib.generators.mkLuaInline ''mod .. " + SHIFT + Space"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(launcherCalc)")
-      ];
-    }
+    # {
+    #   _args = [
+    #     (lib.generators.mkLuaInline ''mod .. " + SHIFT + Space"'')
+    #     (lib.generators.mkLuaInline "hl.dsp.exec_cmd(launcherCalc)")
+    #   ];
+    # }
 
     # Clipboard history
     {

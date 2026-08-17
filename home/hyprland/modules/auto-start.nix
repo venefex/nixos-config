@@ -8,11 +8,13 @@
         function()
           hl.exec_cmd("uwsm app -- wl-paste --watch cliphist store")
 
-          hl.exec_cmd("uwsm app -- kitten quick-access-terminal")
-          hl.exec_cmd("uwsm app -- fooyin", {
+          hl.exec_cmd("runapp noctalia")
+
+          hl.exec_cmd("kitten quick-access-terminal")
+          hl.exec_cmd("fooyin", {
             workspace = "special:music silent",
           })
-          hl.exec_cmd("uwsm app -- vesktop", {
+          hl.exec_cmd("vesktop", {
             workspace = "special:messaging silent",
           })
         end
