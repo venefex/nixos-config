@@ -6,7 +6,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + Space"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(noctalia msg panel-toggle launcher)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("noctalia msg panel-toggle launcher")'')
       ];
     }
 
@@ -14,7 +14,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + F12"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(noctalia msg settings-toggle)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("noctalia msg settings-toggle")'')
       ];
     }
 
@@ -22,7 +22,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + End"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(noctalia msg panel-toggle session)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("noctalia msg panel-toggle session")'')
       ];
     }
   ];
