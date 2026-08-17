@@ -8,6 +8,11 @@ let
 
     liquidctl --match kraken set fan speed \
       20 25  35 40  40 50  45 60  50 75  55 90  60 100
+
+    notify-send \
+      --app-name="liquidctl-profile" \
+        "AIO Profile" \
+        "Balanced"
   '';
 
   aio-performance = pkgs.writeShellScriptBin "aio-performance" ''
@@ -17,6 +22,11 @@ let
 
     liquidctl --match kraken set fan speed \
       20 40  35 45  40 55  45 70  50 85  55 95  60 100
+
+    notify-send \
+      --app-name="liquidctl-profile" \
+        "AIO Profile" \
+        "Performance"
   '';
 
   aio-max = pkgs.writeShellScriptBin "aio-max" ''
@@ -26,6 +36,11 @@ let
 
     liquidctl --match kraken set fan speed \
       20 100
+
+    notify-send \
+      --app-name="liquidctl-profile" \
+        "AIO Profile" \
+        "Maximum"
   '';
 in
 {
