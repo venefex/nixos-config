@@ -4,11 +4,11 @@
   # Installation is in ./modules/desktop/hyprland.nix
 
   imports = [
+    ./modules/keybinds/default.nix
     ./modules/animations.nix
     ./modules/appearance.nix
     ./modules/auto-start.nix
     ./modules/input.nix
-    ./modules/keybinds.nix
     ./modules/layout.nix
     ./modules/misc.nix
     ./modules/monitors.nix
