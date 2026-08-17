@@ -22,7 +22,7 @@
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + End"'')
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(noctalia msg panel-toggle session")
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(noctalia msg panel-toggle session)")
       ];
     }
   ];
