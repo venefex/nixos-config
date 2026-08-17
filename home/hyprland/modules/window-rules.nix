@@ -48,7 +48,7 @@
       center = true;
       size = [
         "monitor_w*0.5"
-        "monitor_h*0.8"
+        "monitor_h*0.7"
       ];
     }
 
@@ -105,6 +105,19 @@
       size = [
         "monitor_w*0.25"
         "monitor_h*0.5"
+      ];
+    }
+
+    # keditfiletype
+    {
+      name = "noctalia-settings-floating";
+      match.title = "Noctalia Settings";
+      match.class = "dev.noctalia.Noctalia";
+      float = true;
+      center = true;
+      size = [
+        "monitor_w*0.5"
+        "monitor_h*0.7"
       ];
     }
 

@@ -14,9 +14,9 @@
           hl.exec_cmd("fooyin", {
             workspace = "special:music silent",
           })
-          hl.exec_cmd("vesktop", {
-            workspace = "special:messaging silent",
-          })
+          --hl.exec_cmd("vesktop", {
+          --  workspace = "special:messaging silent",
+          --})
         end
       '')
     ];
