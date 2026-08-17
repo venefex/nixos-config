@@ -54,6 +54,7 @@ in
             "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"
           )
         '')
+        (lib.generators.mkLuaInline ''{ description = "Exit Hyprland" }'')
       ];
     }
 
@@ -62,76 +63,79 @@ in
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + PAGE_DOWN"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("${aio-balanced}/bin/aio-balanced")'')
+        (lib.generators.mkLuaInline ''{ description = "AIO: Balanced Profile" }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + PAGE_UP"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("${aio-performance}/bin/aio-performance")'')
+        (lib.generators.mkLuaInline ''{ description = "AIO: Performance Profile" }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + SHIFT + PAGE_UP"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("${aio-max}/bin/aio-max")'')
+        (lib.generators.mkLuaInline ''{ description = "AIO: Maximum Profile" }'')
       ];
     }
 
     # Audio
     {
       _args = [
-        (lib.generators.mkLuaInline ''"XF86AudioNext"'')
-        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("playerctl next")'')
-        (lib.generators.mkLuaInline "{ locked = true }")
-      ];
-    }
-    {
-      _args = [
         (lib.generators.mkLuaInline ''"XF86AudioPlay"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("playerctl play-pause")'')
-        (lib.generators.mkLuaInline "{ locked = true }")
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Audio: Play Track" }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''"XF86AudioPause"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("playerctl play-pause")'')
-        (lib.generators.mkLuaInline "{ locked = true }")
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Audio: Pause Track" }'')
+      ];
+    }
+    {
+      _args = [
+        (lib.generators.mkLuaInline ''"XF86AudioNext"'')
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("playerctl next")'')
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Audio: Next Track" }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''"XF86AudioPrev"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("playerctl previous")'')
-        (lib.generators.mkLuaInline "{ locked = true }")
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Audio: Previous Track" }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''"XF86AudioRaiseVolume"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+")'')
-        (lib.generators.mkLuaInline "{ locked = true, repeating = true }")
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Audio: Raise Volume" }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''"XF86AudioLowerVolume"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")'')
-        (lib.generators.mkLuaInline "{ locked = true, repeating = true }")
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Audio: Lower Volume" }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''"XF86AudioMute"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")'')
-        (lib.generators.mkLuaInline "{ locked = true, repeating = true }")
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Audio: Mute" }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''"XF86AudioMicMute"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle")'')
-        (lib.generators.mkLuaInline "{ locked = true, repeating = true }")
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Audio: Mic Mute" }'')
       ];
     }
 
@@ -140,14 +144,14 @@ in
       _args = [
         (lib.generators.mkLuaInline ''"XF86MonBrightnessUp"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+")'')
-        (lib.generators.mkLuaInline "{ locked = true, repeating = true }")
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Screen: Brightness Up" }'')
       ];
     }
     {
       _args = [
         (lib.generators.mkLuaInline ''"XF86MonBrightnessDown"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-")'')
-        (lib.generators.mkLuaInline "{ locked = true, repeating = true }")
+        (lib.generators.mkLuaInline ''{ locked = true, repeating = true, description = "Screen: Brightness Down" }'')
       ];
     }
 

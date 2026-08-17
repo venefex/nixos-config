@@ -1,13 +1,19 @@
 { lib, ... }:
 
 {
+  # Noctalia keymap heeading
+  wayland.windowManager.hyprland.extraConfig = ''
+    -- 1. Noctalia
+  '';
+
   wayland.windowManager.hyprland.settings.bind = [
-    # Launcher
+
+    # Control-center
     {
       _args = [
-        (lib.generators.mkLuaInline ''"SUPER + SUPER_L"'')
+        (lib.generators.mkLuaInline ''mod .. " + Home"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("noctalia msg panel-toggle control-center")'')
-        (lib.generators.mkLuaInline ''{ release = true }'')
+        (lib.generators.mkLuaInline ''{ description = "Control Center" }'')
       ];
     }
 
@@ -16,6 +22,7 @@
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + Space"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("noctalia msg panel-toggle launcher")'')
+        (lib.generators.mkLuaInline ''{ description = "Launcher" }'')
       ];
     }
 
@@ -24,6 +31,7 @@
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + F12"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("noctalia msg settings-toggle")'')
+        (lib.generators.mkLuaInline ''{ description = "Settings" }'')
       ];
     }
 
@@ -32,6 +40,7 @@
       _args = [
         (lib.generators.mkLuaInline ''mod .. " + End"'')
         (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("noctalia msg panel-toggle session")'')
+        (lib.generators.mkLuaInline ''{ description = "Session" }'')
       ];
     }
   ];
