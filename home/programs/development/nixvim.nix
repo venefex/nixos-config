@@ -2,8 +2,12 @@
 
 {
   programs.nixvim = {
-    enable = true;
+    enable = false;
 
     # colorschemes.gruvbox.enable = true;
   };
+
+  home.packages = with pkgs; [
+    neovim
+  ];
 }
